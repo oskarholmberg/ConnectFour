@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="222.0" prefWidth="267.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.WinDialogController">
+   <children>
+      <Label layoutX="24.0" layoutY="34.0" text="Congratulations!!" textFill="RED" AnchorPane.topAnchor="34.0">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Label fx:id="winningPlayerLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="92.0" prefHeight="39.0" prefWidth="267.0" text="Player 1 won!" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <HBox layoutX="5.0" layoutY="183.0" spacing="10.0" AnchorPane.bottomAnchor="14.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#auditLogClicked" prefHeight="25.0" prefWidth="80.0" text="Audit log" />
+            <Button layoutX="108.0" layoutY="168.0" mnemonicParsing="false" onAction="#newGameClicked" prefWidth="80.0" text="New Game" />
+            <Button layoutX="181.0" layoutY="168.0" mnemonicParsing="false" onAction="#mainMenuClicked" prefWidth="80.0" text="Main menu" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
