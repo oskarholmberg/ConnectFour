@@ -11,6 +11,7 @@ public class NameDialogController {
 
     private Main main;
     private Stage dialogStage;
+    private Board board;
 
     @FXML
     private TextField player1;
@@ -26,10 +27,9 @@ public class NameDialogController {
     @FXML
     void okClicked(ActionEvent event) {
         dialogStage.close();
-        Board board = new Board();
         board.addPlayer(player1.getText());
         board.addPlayer(player2.getText());
-        main.showGamePane(board);
+        main.showGamePane();
     }
 
     public void setDialogStage(Stage stage){
@@ -37,5 +37,7 @@ public class NameDialogController {
     }
 
     public void setMain(Main main){this.main = main;}
+
+    public void setBoard(Board board){this.board = board;}
 
 }

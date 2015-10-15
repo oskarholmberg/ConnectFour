@@ -16,6 +16,7 @@ public class Board {
     private ArrayList<String> players = new ArrayList<>();
     private StringBuilder auditlog;
     private Calendar cal;
+    private int nbrPlayers = 2;
 
     public Board() {
         cal = Calendar.getInstance();
@@ -39,16 +40,16 @@ public class Board {
             int slot = nextAvailableSlot(column);
             if (slot != -1) {
                 matrix[column][slot] = player;
-                auditlog.append(cal.getTime().toString() + ":" + players.get(player) + " placed a tile in column " + column + "].\n");
+                auditlog.append(cal.getTime().toString() + ": " + players.get(player) + " placed a tile in column " + column + "].\n");
                 if (winningMove()) {
-                    auditlog.append(players.get(player) + " won!\n");
+                    auditlog.append(cal.getTime().toString()+": "+players.get(player) + " won!\n");
                     return 1;
                 }
-                player = (player + 1) % 2;
+                player = (player + 1) % nbrPlayers;
                 return 0;
             }
         }
-        auditlog.append(cal.getTime().toString() + ":" + players.get(player) + " tried to place a tile in column: +" + column + ".\n");
+        auditlog.append(cal.getTime().toString() + ": " + players.get(player) + " tried to place a tile in column: +" + column + ".\n");
         return -1;
     }
 
@@ -58,8 +59,8 @@ public class Board {
      *
      * @return true if a player has won, false otherwise.
      */
-    public boolean winningMove() {
-        for (int i = height - 1; i >= 0; i--) { // -3 since if you have not gotten 4 in a row yet you can't it due to board limitations.
+    private boolean winningMove() {
+        for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
                 if (matrix[j][i] != -1) { // No point in starting at an empty position
                     if (checkRight(j, i, 1)) return true;
@@ -76,7 +77,7 @@ public class Board {
      * Clears board
      */
     public void reset() {
-        auditlog.append("Board was reset.\n");
+        auditlog.append(cal.getTime().toString()+": Board was reset.\n");
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
                 matrix[j][i] = -1;
@@ -89,6 +90,9 @@ public class Board {
     }
 
     public void addPlayer(String name) {
+        if(players.size()>=nbrPlayers){
+            players.clear();
+        }
         players.add(name);
     }
 
@@ -102,6 +106,17 @@ public class Board {
 
     public String getAuditLog() {
         return auditlog.toString();
+    }
+
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < height; i++) {
+            for (int j = 0; j < width; j++) {
+                sb.append(matrix[j][i] + "\t");
+            }
+            sb.append("\n");
+        }
+        return sb.toString();
     }
 
     /**
@@ -174,7 +189,6 @@ public class Board {
     private boolean checkDiagonalRight(int w, int h, int inARow) {
         try {
             if (inARow == 4) {
-                System.out.println("DiaRight");
                 return true;
             }
             if (matrix[w][h] == matrix[w + 1][h - 1]) {
@@ -197,12 +211,10 @@ public class Board {
     private boolean checkDiagonalLeft(int w, int h, int inARow) {
         try {
             if (inARow == 4) {
-
-                System.out.println("DiaLeft");
                 return true;
             }
-            if (matrix[w][h] == matrix[w + 1][h - 1]) {
-                return checkDiagonalRight(w - 1, h - 1, inARow + 1);
+            if (matrix[w][h] == matrix[w - 1][h - 1]) {
+                return checkDiagonalLeft(w - 1, h - 1, inARow + 1);
             }
         } catch (IndexOutOfBoundsException e) {
             return false;

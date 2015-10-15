@@ -17,6 +17,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
+
 import java.io.IOException;
 import java.util.Observable;
 import java.util.Observer;
@@ -27,7 +28,7 @@ public class GamePaneController {
     @FXML
     private GridPane boardGrid;
     @FXML
-    private Label infoLabel;
+    private Label turnLabel;
     @FXML
     private Pane pane;
     @FXML
@@ -45,22 +46,13 @@ public class GamePaneController {
     @FXML
     void newGameButton(ActionEvent event) {
         board.reset();
-        infoLabel.setText(board.getPlayerNames().get(board.getPlayer())+"'s turn.");
+        main.showGamePane();
+        turnLabel.setText(board.getPlayerNames().get(board.getPlayer()) + "'s turn!");
     }
 
     @FXML
-    void multiplayerButtonClicked(ActionEvent event){
-
-    }
-
-    @FXML
-    void highscoreButtonClicked(ActionEvent event) {
-
-    }
-
-    @FXML
-    void auditlogButtonClicked(ActionEvent event) {
-
+    void mainMenuButton(ActionEvent event) {
+        main.showMainPane();
     }
 
     @FXML
@@ -69,28 +61,31 @@ public class GamePaneController {
         changeCoinColor();
         int column = (int) (((event.getSceneX() - 14) / 50));//calculate which column was clicked. -14 due to alignment.
         won = board.put(column);
+        turnLabel.setText(board.getPlayerNames().get(board.getPlayer())+"'s turn!");
         paint();
-        if(won==1){
-            main.showWinDialog(board);
+        if (won == 1) {
+            main.showWinDialog();
         }
     }
-    public void setMain(Main main){
+
+    public void setMain(Main main) {
         this.main = main;
     }
-    public void setBoard(Board board){
+
+    public void setBoard(Board board) {
         this.board = board;
     }
 
-    private void changeCoinColor(){
-        if(board.getPlayer()==1){
+    private void changeCoinColor() {
+        if (board.getPlayer() == 1) {
             coin.setFill(Paint.valueOf("red"));
         }
-        if(board.getPlayer()==0){
+        if (board.getPlayer() == 0) {
             coin.setFill(Paint.valueOf("blue"));
         }
     }
 
-    private void paint(){
+    private void paint() {
         matrix = board.getMatrix();
         for (int i = 0; i < 7; i++) {
             for (int j = 5; j >= 0; j--) {
@@ -99,9 +94,6 @@ public class GamePaneController {
                 }
                 if (matrix[i][j] == 1) {
                     boardGrid.add(new Circle(25, Paint.valueOf("blue")), i, j);
-                }
-                if (matrix[i][j] == -1) {
-                    boardGrid.add(new Circle(25, Paint.valueOf("white")), i, j);
                 }
             }
         }

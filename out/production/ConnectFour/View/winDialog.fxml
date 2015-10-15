@@ -17,12 +17,8 @@
             <Font size="27.0" />
          </font>
       </Label>
-      <HBox layoutX="5.0" layoutY="183.0" spacing="10.0" AnchorPane.bottomAnchor="14.0">
-         <children>
-            <Button mnemonicParsing="false" onAction="#auditLogClicked" prefHeight="25.0" prefWidth="80.0" text="Audit log" />
-            <Button layoutX="108.0" layoutY="168.0" mnemonicParsing="false" onAction="#newGameClicked" prefWidth="80.0" text="New Game" />
-            <Button layoutX="181.0" layoutY="168.0" mnemonicParsing="false" onAction="#mainMenuClicked" prefWidth="80.0" text="Main menu" />
-         </children>
-      </HBox>
+      <Button layoutX="74.0" layoutY="135.0" mnemonicParsing="false" onAction="#newGameClicked" prefHeight="39.0" prefWidth="119.0" text="New Game" AnchorPane.bottomAnchor="48.0" />
+      <Button layoutX="24.0" layoutY="183.0" mnemonicParsing="false" onAction="#auditLogClicked" prefHeight="25.0" prefWidth="80.0" text="Audit log" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="24.0" />
+      <Button layoutX="165.0" layoutY="183.0" mnemonicParsing="false" onAction="#mainMenuClicked" prefWidth="80.0" text="Main menu" AnchorPane.bottomAnchor="14.0" />
    </children>
 </AnchorPane>

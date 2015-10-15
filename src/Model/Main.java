@@ -19,6 +19,7 @@ public class Main extends Application {
 
     private Stage primaryStage;
     private BorderPane rootLayout;
+    private Board board = new Board();
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -44,13 +45,14 @@ public class Main extends Application {
             rootLayout.setCenter(mainPane);
             MainPaneController contoller = loader.getController();
             contoller.setMain(this);
+            contoller.setBoard(board);
 
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public void showGamePane(Board board){
+    public void showGamePane(){
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../View/gamePane.fxml"));
             Pane gamePane = (Pane) loader.load();
@@ -69,12 +71,14 @@ public class Main extends Application {
             AnchorPane dialogPane = (AnchorPane) loader.load();
             Stage dialogStage = new Stage();
             dialogStage.setTitle("Players");
+            dialogStage.setResizable(false);
             dialogStage.initModality(Modality.WINDOW_MODAL);
             dialogStage.initOwner(primaryStage);
             Scene scene = new Scene(dialogPane);
             dialogStage.setScene(scene);
             NameDialogController controller = loader.getController();
             controller.setMain(this);
+            controller.setBoard(board);
             controller.setDialogStage(dialogStage);
 
             dialogStage.showAndWait();
@@ -84,12 +88,13 @@ public class Main extends Application {
         }
     }
 
-    public void showWinDialog(Board board){
+    public void showWinDialog(){
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../View/winDialog.fxml"));
             AnchorPane dialogPane = (AnchorPane) loader.load();
             Stage dialogStage = new Stage();
             dialogStage.setTitle("WINNER!");
+            dialogStage.setResizable(false);
             dialogStage.initModality(Modality.WINDOW_MODAL);
             dialogStage.initOwner(primaryStage);
             Scene scene = new Scene(dialogPane);
@@ -97,7 +102,7 @@ public class Main extends Application {
             WinDialogController controller = loader.getController();
             controller.setMain(this);
             controller.setBoard(board);
-
+            controller.setDialog(dialogStage);
             dialogStage.showAndWait();
 
         } catch (IOException e) {
@@ -105,19 +110,20 @@ public class Main extends Application {
         }
     }
 
-    public void showAuditLog(String log){
+    public void showAuditLog(){
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../View/auditLogPane.fxml"));
             BorderPane pane = (BorderPane) loader.load();
             Stage dialogStage = new Stage();
-            dialogStage.setTitle("WINNER!");
+            dialogStage.setTitle("Audit log");
+            dialogStage.setResizable(false);
             dialogStage.initModality(Modality.WINDOW_MODAL);
             dialogStage.initOwner(primaryStage);
             Scene scene = new Scene(pane);
             dialogStage.setScene(scene);
             AuditLogController controller = loader.getController();
-            controller.setText(log);
-
+            controller.setBoard(board);
+            controller.setText();
             dialogStage.showAndWait();
 
         } catch (IOException e) {

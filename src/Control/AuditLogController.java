@@ -1,5 +1,6 @@
 package Control;
 
+import Model.Board;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 
@@ -10,8 +11,11 @@ public class AuditLogController {
 
     @FXML
     private TextArea auditTextArea;
+    private Board board;
 
-    public void setText(String s){
-        auditTextArea.setText(s);
+    public void setText(){
+        auditTextArea.setText(board.getAuditLog());
     }
+
+    public void setBoard(Board board){this.board = board;}
 }

@@ -1,15 +1,16 @@
 package Control;
 
 
+import Model.Board;
 import Model.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
-import java.io.IOException;
 
 public class MainPaneController {
 
     private Main main;
+    private Board board;
 
     @FXML
     void multiplayerButtonClicked(ActionEvent event) {
@@ -23,9 +24,10 @@ public class MainPaneController {
 
     @FXML
     void auditlogButtonClicked(ActionEvent event) {
-
+        main.showAuditLog();
     }
 
     public void setMain(Main main){this.main = main;}
 
+    public void setBoard(Board board){this.board = board;}
 }

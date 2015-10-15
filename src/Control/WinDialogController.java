@@ -5,28 +5,34 @@ import Model.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
 
 public class WinDialogController {
 
     private Main main;
     private Board board;
+    private Stage window;
 
     @FXML
     private Label winningPlayerLabel;
 
     @FXML
     void newGameClicked(ActionEvent event) {
-
+        board.reset();
+        window.close();
+        main.showGamePane();
     }
 
     @FXML
     void mainMenuClicked(ActionEvent event) {
-
+        window.close();
+        main.showMainPane();
     }
 
     @FXML
     void auditLogClicked(ActionEvent event) {
-        main.showAuditLog(board.getAuditLog());
+        window.close();
+        main.showAuditLog();
     }
 
     public void setWinner(String s){
@@ -38,6 +44,10 @@ public class WinDialogController {
     public void setBoard(Board board){
         this.board = board;
         winningPlayerLabel.setText(board.getPlayerNames().get(board.getPlayer())+ " won!");
+    }
+
+    public void setDialog(Stage dialogStage){
+        window = dialogStage;
     }
 
 }
