@@ -15,6 +15,8 @@ public class BoardTest {
 
     public void init(){
         board = new Board();
+        board.addPlayer("Oskar", 0);
+        board.addPlayer("Kevin", 1);
         matrix = new int[7][6];
         for(int i = 0; i < 6; i ++){
             for(int j = 0; j < 7; j++){

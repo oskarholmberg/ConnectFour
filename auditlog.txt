@@ -252,3 +252,12 @@ Thu Oct 15 22:54:55 GMT+01:00 2015: Thrall placed a tile in column 6].
 Thu Oct 15 22:54:55 GMT+01:00 2015: Thrall won!
 Thu Oct 15 23:07:34 GMT+01:00 2015: Board was reset.
 Thu Oct 15 23:08:30 GMT+01:00 2015: Board was reset.
+Thu Oct 15 23:15:24 GMT+01:00 2015: Board was reset.
+Thu Oct 15 23:15:24 GMT+01:00 2015: Oskar placed a tile in column 0].
+Thu Oct 15 23:15:24 GMT+01:00 2015: Anduin placed a tile in column 1].
+Thu Oct 15 23:15:24 GMT+01:00 2015: Oskar placed a tile in column 0].
+Thu Oct 15 23:15:24 GMT+01:00 2015: Anduin placed a tile in column 1].
+Thu Oct 15 23:15:24 GMT+01:00 2015: Oskar placed a tile in column 0].
+Thu Oct 15 23:15:24 GMT+01:00 2015: Anduin placed a tile in column 1].
+Thu Oct 15 23:15:24 GMT+01:00 2015: Oskar placed a tile in column 0].
+Thu Oct 15 23:15:24 GMT+01:00 2015: Oskar won!

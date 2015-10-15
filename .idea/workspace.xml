@@ -2,26 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c182164-c10d-4d9f-87b4-e554fdd8df25" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Control/HighscorePaneController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Model/Player.java" />
-      <change type="DELETED" beforePath="C:\Users\Oskar\IdeaProjects\ConnectFour\out\production\ConnectFour\Model\highscore.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Oskar\IdeaProjects\ConnectFour\src\Model\highscore.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ConnectFour/Model/Board.class" afterPath="$PROJECT_DIR$/out/production/ConnectFour/Model/Board.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ConnectFour/Tests/BoardTest.class" afterPath="$PROJECT_DIR$/out/production/ConnectFour/Tests/BoardTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Control/AuditLogController.java" afterPath="$PROJECT_DIR$/src/Control/AuditLogController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Board.java" afterPath="$PROJECT_DIR$/src/Model/Board.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tests/BoardTest.java" afterPath="$PROJECT_DIR$/src/Tests/BoardTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Control/GamePaneController.java" afterPath="$PROJECT_DIR$/src/Control/GamePaneController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Main.java" afterPath="$PROJECT_DIR$/src/Model/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Control/MainPaneController.java" afterPath="$PROJECT_DIR$/src/Control/MainPaneController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Control/NameDialogController.java" afterPath="$PROJECT_DIR$/src/Control/NameDialogController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Control/WinDialogController.java" afterPath="$PROJECT_DIR$/src/Control/WinDialogController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ConnectFour/View/highscorePane.fxml" afterPath="$PROJECT_DIR$/out/production/ConnectFour/View/highscorePane.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/highscorePane.fxml" afterPath="$PROJECT_DIR$/src/View/highscorePane.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ConnectFour/View/mainPane.fxml" afterPath="$PROJECT_DIR$/out/production/ConnectFour/View/mainPane.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/mainPane.fxml" afterPath="$PROJECT_DIR$/src/View/mainPane.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ConnectFour/View/winDialog.fxml" afterPath="$PROJECT_DIR$/out/production/ConnectFour/View/winDialog.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/winDialog.fxml" afterPath="$PROJECT_DIR$/src/View/winDialog.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ConnectFour.iws" />
@@ -72,7 +53,7 @@
         <entry file="file://$PROJECT_DIR$/src/Model/Board.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="303" column="21" selection-start-line="303" selection-start-column="21" selection-end-line="303" selection-end-column="21" />
+              <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3006#3007#0" expanded="true" />
@@ -82,6 +63,26 @@
                 <element signature="e#8361#8362#0" expanded="true" />
                 <element signature="e#8402#8403#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BoardTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Tests/BoardTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestRunner.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Tests/TestRunner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -108,49 +109,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="players.txt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="players.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/players.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.19373219">
               <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainPaneController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainPaneController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Control/MainPaneController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6851852">
+            <state vertical-scroll-proportion="0.0">
               <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#402#403#0" expanded="true" />
                 <element signature="e#442#443#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HighscorePaneController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Control/HighscorePaneController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="51" column="30" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WinDialogController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Control/WinDialogController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="45" column="76" selection-start-line="45" selection-start-column="76" selection-end-line="45" selection-end-column="76" />
-              <folding>
-                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -225,7 +202,6 @@
         <option value="$PROJECT_DIR$/src/Control/HighscorePaneController.java" />
         <option value="$PROJECT_DIR$/src/Model/auditlog.txt" />
         <option value="$PROJECT_DIR$/src/Control/GamePaneController.java" />
-        <option value="$PROJECT_DIR$/src/Tests/BoardTest.java" />
         <option value="$PROJECT_DIR$/src/Control/WinDialogController.java" />
         <option value="$PROJECT_DIR$/src/Model/highscore.txt" />
         <option value="$PROJECT_DIR$/src/Model/players.txt" />
@@ -234,8 +210,9 @@
         <option value="$PROJECT_DIR$/src/Control/AuditLogController.java" />
         <option value="$PROJECT_DIR$/players.txt" />
         <option value="$PROJECT_DIR$/src/Control/MainPaneController.java" />
-        <option value="$PROJECT_DIR$/src/Model/Board.java" />
         <option value="$PROJECT_DIR$/src/Model/Main.java" />
+        <option value="$PROJECT_DIR$/src/Model/Board.java" />
+        <option value="$PROJECT_DIR$/src/Tests/BoardTest.java" />
       </list>
     </option>
   </component>
@@ -1085,14 +1062,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tests/TestRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/View/highscorePane.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
@@ -1111,14 +1080,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.18085106">
           <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tests/BoardTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -1180,30 +1141,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/players.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Board.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="303" column="21" selection-start-line="303" selection-start-column="21" selection-end-line="303" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3006#3007#0" expanded="true" />
-            <element signature="e#3035#3036#0" expanded="true" />
-            <element signature="e#7641#7642#0" expanded="true" />
-            <element signature="e#7675#7676#0" expanded="true" />
-            <element signature="e#8361#8362#0" expanded="true" />
-            <element signature="e#8402#8403#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1228,13 +1165,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Control/MainPaneController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6851852">
+        <state vertical-scroll-proportion="0.0">
           <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#402#403#0" expanded="true" />
             <element signature="e#442#443#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tests/TestRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3006#3007#0" expanded="true" />
+            <element signature="e#3035#3036#0" expanded="true" />
+            <element signature="e#7641#7642#0" expanded="true" />
+            <element signature="e#7675#7676#0" expanded="true" />
+            <element signature="e#8361#8362#0" expanded="true" />
+            <element signature="e#8402#8403#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tests/BoardTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/players.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19373219">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
