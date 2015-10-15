@@ -14,6 +14,7 @@ public class AuditLogController {
     private Board board;
 
     public void setText(){
+        auditTextArea.setEditable(false);
         auditTextArea.setText(board.getAuditLog());
     }
 

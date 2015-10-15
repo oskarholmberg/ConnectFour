@@ -38,16 +38,10 @@ public class GamePaneController {
     private Main main;
     private int won = 0;
 
-
-    public GamePaneController() {
-
-    }
-
     @FXML
     void newGameButton(ActionEvent event) {
         board.reset();
         main.showGamePane();
-        turnLabel.setText(board.getPlayerNames().get(board.getPlayer()) + "'s turn!");
     }
 
     @FXML
@@ -58,10 +52,9 @@ public class GamePaneController {
     @FXML
     void gridClicked(MouseEvent event) {
         EventTarget target = event.getTarget();
-        changeCoinColor();
         int column = (int) (((event.getSceneX() - 14) / 50));//calculate which column was clicked. -14 due to alignment.
         won = board.put(column);
-        turnLabel.setText(board.getPlayerNames().get(board.getPlayer())+"'s turn!");
+        setTurn();
         paint();
         if (won == 1) {
             main.showWinDialog();
@@ -76,11 +69,12 @@ public class GamePaneController {
         this.board = board;
     }
 
-    private void changeCoinColor() {
-        if (board.getPlayer() == 1) {
+    public void setTurn(){
+        turnLabel.setText(board.getPlayerNames()[board.getPlayer()] + "'s turn!");
+        if (board.getPlayer() == 0) {
             coin.setFill(Paint.valueOf("red"));
         }
-        if (board.getPlayer() == 0) {
+        if (board.getPlayer() == 1) {
             coin.setFill(Paint.valueOf("blue"));
         }
     }

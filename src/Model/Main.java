@@ -2,6 +2,8 @@ package Model;
 
 import Control.*;
 import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
@@ -9,6 +11,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 import java.io.IOException;
 
@@ -32,6 +35,13 @@ public class Main extends Application {
             this.primaryStage.setScene(scene);
             this.primaryStage.setResizable(false);
             this.primaryStage.show();
+            this.primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+                @Override
+                public void handle(WindowEvent windowEvent) {
+                    board.save();
+                    Platform.exit();
+                }
+            });
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -43,9 +53,9 @@ public class Main extends Application {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../View/mainPane.fxml"));
             Pane mainPane = (Pane) loader.load();
             rootLayout.setCenter(mainPane);
-            MainPaneController contoller = loader.getController();
-            contoller.setMain(this);
-            contoller.setBoard(board);
+            MainPaneController controller = loader.getController();
+            controller.setMain(this);
+            controller.setBoard(board);
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -60,6 +70,21 @@ public class Main extends Application {
             GamePaneController controller = loader.getController();
             controller.setMain(this);
             controller.setBoard(board);
+            controller.setTurn();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void showHighscorePane(){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../View/highscorePane.fxml"));
+            Pane gamePane = (Pane) loader.load();
+            rootLayout.setCenter(gamePane);
+            HighscorePaneController controller = loader.getController();
+            controller.setMain(this);
+            controller.setBoard(board);
+            controller.setText();
         } catch (IOException e) {
             e.printStackTrace();
         }

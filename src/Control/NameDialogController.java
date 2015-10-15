@@ -27,8 +27,9 @@ public class NameDialogController {
     @FXML
     void okClicked(ActionEvent event) {
         dialogStage.close();
-        board.addPlayer(player1.getText());
-        board.addPlayer(player2.getText());
+        board.addPlayer(player1.getText(), 0);
+        board.addPlayer(player2.getText(), 1);
+        board.reset();
         main.showGamePane();
     }
 

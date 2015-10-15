@@ -18,7 +18,7 @@
          </font>
       </Label>
       <Button layoutX="74.0" layoutY="135.0" mnemonicParsing="false" onAction="#newGameClicked" prefHeight="39.0" prefWidth="119.0" text="New Game" AnchorPane.bottomAnchor="48.0" />
-      <Button layoutX="24.0" layoutY="183.0" mnemonicParsing="false" onAction="#auditLogClicked" prefHeight="25.0" prefWidth="80.0" text="Audit log" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="24.0" />
-      <Button layoutX="165.0" layoutY="183.0" mnemonicParsing="false" onAction="#mainMenuClicked" prefWidth="80.0" text="Main menu" AnchorPane.bottomAnchor="14.0" />
+      <Button layoutX="24.0" layoutY="183.0" mnemonicParsing="false" onAction="#auditLogClicked" prefHeight="25.0" prefWidth="96.0" text="Audit log" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="24.0" />
+      <Button layoutX="149.0" layoutY="183.0" mnemonicParsing="false" onAction="#mainMenuClicked" prefHeight="25.0" prefWidth="96.0" text="Main menu" AnchorPane.bottomAnchor="14.0" />
    </children>
 </AnchorPane>

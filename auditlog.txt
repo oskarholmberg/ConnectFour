@@ -1,0 +1,254 @@
+Thu Oct 15 22:37:20 GMT+01:00 2015: Oskar placed a tile in column 0].
+Thu Oct 15 22:37:20 GMT+01:00 2015: Kevin placed a tile in column 1].
+Thu Oct 15 22:37:20 GMT+01:00 2015: Oskar placed a tile in column 2].
+Thu Oct 15 22:37:20 GMT+01:00 2015: Kevin placed a tile in column 3].
+Thu Oct 15 22:37:20 GMT+01:00 2015: Oskar placed a tile in column 3].
+Thu Oct 15 22:37:20 GMT+01:00 2015: Kevin placed a tile in column 2].
+Thu Oct 15 22:37:20 GMT+01:00 2015: Oskar placed a tile in column 2].
+Thu Oct 15 22:37:20 GMT+01:00 2015: Kevin placed a tile in column 4].
+Thu Oct 15 22:37:20 GMT+01:00 2015: Oskar placed a tile in column 5].
+Thu Oct 15 22:37:20 GMT+01:00 2015: Kevin placed a tile in column 5].
+Thu Oct 15 22:37:20 GMT+01:00 2015: Oskar placed a tile in column 6].
+Thu Oct 15 22:37:20 GMT+01:00 2015: Kevin placed a tile in column 5].
+Thu Oct 15 22:37:20 GMT+01:00 2015: Oskar placed a tile in column 5].
+Thu Oct 15 22:37:20 GMT+01:00 2015: Kevin placed a tile in column 5].
+Thu Oct 15 22:37:20 GMT+01:00 2015: Oskar placed a tile in column 4].
+Thu Oct 15 22:37:20 GMT+01:00 2015: Kevin placed a tile in column 4].
+Thu Oct 15 22:37:20 GMT+01:00 2015: Oskar placed a tile in column 4].
+Thu Oct 15 22:37:20 GMT+01:00 2015: Kevin placed a tile in column 3].
+Thu Oct 15 22:37:20 GMT+01:00 2015: Oskar placed a tile in column 2].
+Thu Oct 15 22:37:20 GMT+01:00 2015: Kevin placed a tile in column 2].
+Thu Oct 15 22:37:20 GMT+01:00 2015: Oskar placed a tile in column 1].
+Thu Oct 15 22:37:20 GMT+01:00 2015: Kevin placed a tile in column 0].
+Thu Oct 15 22:37:20 GMT+01:00 2015: Oskar placed a tile in column 0].
+Thu Oct 15 22:37:20 GMT+01:00 2015: Kevin placed a tile in column 0].
+Thu Oct 15 22:37:20 GMT+01:00 2015: Oskar placed a tile in column 1].
+Thu Oct 15 22:37:20 GMT+01:00 2015: Kevin placed a tile in column 1].
+Thu Oct 15 22:37:20 GMT+01:00 2015: Oskar placed a tile in column 1].
+Thu Oct 15 22:37:20 GMT+01:00 2015: Kevin placed a tile in column 2].
+Thu Oct 15 22:37:20 GMT+01:00 2015: Oskar placed a tile in column 3].
+Thu Oct 15 22:37:20 GMT+01:00 2015: Oskar won!
+Thu Oct 15 22:38:43 GMT+01:00 2015: Arthas placed a tile in column 3].
+Thu Oct 15 22:38:43 GMT+01:00 2015: Thrall placed a tile in column 3].
+Thu Oct 15 22:38:43 GMT+01:00 2015: Arthas placed a tile in column 1].
+Thu Oct 15 22:38:43 GMT+01:00 2015: Thrall placed a tile in column 1].
+Thu Oct 15 22:38:43 GMT+01:00 2015: Arthas placed a tile in column 3].
+Thu Oct 15 22:38:43 GMT+01:00 2015: Thrall placed a tile in column 5].
+Thu Oct 15 22:38:43 GMT+01:00 2015: Arthas placed a tile in column 5].
+Thu Oct 15 22:38:43 GMT+01:00 2015: Thrall placed a tile in column 4].
+Thu Oct 15 22:38:43 GMT+01:00 2015: Arthas placed a tile in column 3].
+Thu Oct 15 22:38:43 GMT+01:00 2015: Thrall placed a tile in column 2].
+Thu Oct 15 22:38:43 GMT+01:00 2015: Arthas placed a tile in column 2].
+Thu Oct 15 22:38:43 GMT+01:00 2015: Thrall placed a tile in column 1].
+Thu Oct 15 22:38:43 GMT+01:00 2015: Arthas placed a tile in column 0].
+Thu Oct 15 22:38:43 GMT+01:00 2015: Thrall placed a tile in column 0].
+Thu Oct 15 22:38:43 GMT+01:00 2015: Arthas placed a tile in column 4].
+Thu Oct 15 22:38:43 GMT+01:00 2015: Thrall placed a tile in column 4].
+Thu Oct 15 22:38:43 GMT+01:00 2015: Arthas placed a tile in column 4].
+Thu Oct 15 22:38:43 GMT+01:00 2015: Arthas won!
+Thu Oct 15 22:38:43 GMT+01:00 2015: Arthas tried to place a tile in column: 5 but it was full.
+Thu Oct 15 22:41:12 GMT+01:00 2015: Oskar placed a tile in column 0].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Kevin placed a tile in column 1].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Oskar placed a tile in column 2].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Kevin placed a tile in column 4].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Oskar placed a tile in column 5].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Kevin placed a tile in column 4].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Oskar placed a tile in column 3].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Kevin placed a tile in column 3].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Oskar placed a tile in column 2].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Kevin placed a tile in column 1].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Oskar placed a tile in column 1].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Kevin placed a tile in column 2].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Oskar placed a tile in column 4].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Kevin placed a tile in column 5].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Oskar placed a tile in column 5].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Kevin placed a tile in column 6].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Oskar placed a tile in column 6].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Kevin placed a tile in column 5].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Oskar placed a tile in column 5].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Kevin placed a tile in column 3].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Oskar placed a tile in column 2].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Kevin placed a tile in column 2].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Oskar placed a tile in column 0].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Kevin placed a tile in column 0].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Oskar placed a tile in column 0].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Oskar won!
+Thu Oct 15 22:41:12 GMT+01:00 2015: Arhtas tried to place a tile in column: 3 but it was full.
+Thu Oct 15 22:41:12 GMT+01:00 2015: Arhtas tried to place a tile in column: 2 but it was full.
+Thu Oct 15 22:41:12 GMT+01:00 2015: Arhtas tried to place a tile in column: 1 but it was full.
+Thu Oct 15 22:41:12 GMT+01:00 2015: Arhtas tried to place a tile in column: 4 but it was full.
+Thu Oct 15 22:41:12 GMT+01:00 2015: Board was reset.
+Thu Oct 15 22:41:12 GMT+01:00 2015: Arhtas placed a tile in column 1].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Thrall placed a tile in column 1].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Arhtas placed a tile in column 2].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Thrall placed a tile in column 4].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Arhtas placed a tile in column 5].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Thrall placed a tile in column 5].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Arhtas placed a tile in column 3].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Thrall placed a tile in column 3].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Arhtas placed a tile in column 2].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Thrall placed a tile in column 1].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Arhtas placed a tile in column 1].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Thrall placed a tile in column 0].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Arhtas placed a tile in column 0].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Thrall placed a tile in column 0].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Arhtas placed a tile in column 0].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Thrall placed a tile in column 1].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Arhtas placed a tile in column 2].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Thrall placed a tile in column 4].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Arhtas placed a tile in column 5].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Thrall placed a tile in column 5].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Arhtas placed a tile in column 6].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Thrall placed a tile in column 6].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Thrall won!
+Thu Oct 15 22:41:12 GMT+01:00 2015: Board was reset.
+Thu Oct 15 22:41:12 GMT+01:00 2015: Thrall placed a tile in column 1].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Arhtas placed a tile in column 1].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Thrall placed a tile in column 0].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Arhtas placed a tile in column 0].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Thrall placed a tile in column 1].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Arhtas placed a tile in column 3].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Thrall placed a tile in column 4].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Arhtas placed a tile in column 5].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Thrall placed a tile in column 6].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Arhtas placed a tile in column 5].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Thrall placed a tile in column 4].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Arhtas placed a tile in column 4].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Thrall placed a tile in column 3].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Arhtas placed a tile in column 2].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Thrall placed a tile in column 2].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Arhtas placed a tile in column 2].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Thrall placed a tile in column 4].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Arhtas placed a tile in column 4].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Thrall placed a tile in column 5].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Arhtas placed a tile in column 6].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Thrall placed a tile in column 6].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Arhtas placed a tile in column 6].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Thrall placed a tile in column 6].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Arhtas placed a tile in column 5].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Thrall placed a tile in column 5].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Arhtas placed a tile in column 3].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Thrall placed a tile in column 3].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Arhtas placed a tile in column 2].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Thrall placed a tile in column 1].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Arhtas placed a tile in column 0].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Thrall placed a tile in column 1].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Arhtas placed a tile in column 2].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Thrall placed a tile in column 1].
+Thu Oct 15 22:41:12 GMT+01:00 2015: Thrall won!
+Thu Oct 15 22:44:09 GMT+01:00 2015: Board was reset.
+Thu Oct 15 22:44:09 GMT+01:00 2015: Oskar placed a tile in column 1].
+Thu Oct 15 22:44:09 GMT+01:00 2015: Kevin placed a tile in column 2].
+Thu Oct 15 22:44:09 GMT+01:00 2015: Oskar placed a tile in column 3].
+Thu Oct 15 22:44:09 GMT+01:00 2015: Kevin placed a tile in column 4].
+Thu Oct 15 22:44:09 GMT+01:00 2015: Oskar placed a tile in column 3].
+Thu Oct 15 22:44:09 GMT+01:00 2015: Kevin placed a tile in column 2].
+Thu Oct 15 22:44:09 GMT+01:00 2015: Oskar placed a tile in column 1].
+Thu Oct 15 22:44:09 GMT+01:00 2015: Kevin placed a tile in column 0].
+Thu Oct 15 22:44:09 GMT+01:00 2015: Oskar placed a tile in column 0].
+Thu Oct 15 22:44:09 GMT+01:00 2015: Kevin placed a tile in column 0].
+Thu Oct 15 22:44:09 GMT+01:00 2015: Oskar placed a tile in column 1].
+Thu Oct 15 22:44:09 GMT+01:00 2015: Kevin placed a tile in column 4].
+Thu Oct 15 22:44:09 GMT+01:00 2015: Oskar placed a tile in column 5].
+Thu Oct 15 22:44:09 GMT+01:00 2015: Kevin placed a tile in column 6].
+Thu Oct 15 22:44:09 GMT+01:00 2015: Oskar placed a tile in column 6].
+Thu Oct 15 22:44:09 GMT+01:00 2015: Kevin placed a tile in column 5].
+Thu Oct 15 22:44:09 GMT+01:00 2015: Oskar placed a tile in column 5].
+Thu Oct 15 22:44:09 GMT+01:00 2015: Kevin placed a tile in column 4].
+Thu Oct 15 22:44:09 GMT+01:00 2015: Oskar placed a tile in column 3].
+Thu Oct 15 22:44:09 GMT+01:00 2015: Kevin placed a tile in column 3].
+Thu Oct 15 22:44:09 GMT+01:00 2015: Kevin won!
+Thu Oct 15 22:44:09 GMT+01:00 2015: Kevin tried to place a tile in column: 4 but it was full.
+Thu Oct 15 22:44:09 GMT+01:00 2015: Kevin tried to place a tile in column: 2 but it was full.
+Thu Oct 15 22:44:09 GMT+01:00 2015: Kevin tried to place a tile in column: 2 but it was full.
+Thu Oct 15 22:44:09 GMT+01:00 2015: Board was reset.
+Thu Oct 15 22:44:09 GMT+01:00 2015: Thrall placed a tile in column 2].
+Thu Oct 15 22:44:09 GMT+01:00 2015: Arthas placed a tile in column 1].
+Thu Oct 15 22:44:09 GMT+01:00 2015: Thrall placed a tile in column 2].
+Thu Oct 15 22:44:09 GMT+01:00 2015: Arthas placed a tile in column 5].
+Thu Oct 15 22:44:09 GMT+01:00 2015: Thrall placed a tile in column 5].
+Thu Oct 15 22:44:09 GMT+01:00 2015: Arthas placed a tile in column 5].
+Thu Oct 15 22:44:09 GMT+01:00 2015: Thrall placed a tile in column 4].
+Thu Oct 15 22:44:09 GMT+01:00 2015: Arthas placed a tile in column 4].
+Thu Oct 15 22:44:09 GMT+01:00 2015: Thrall placed a tile in column 3].
+Thu Oct 15 22:44:09 GMT+01:00 2015: Arthas placed a tile in column 3].
+Thu Oct 15 22:44:09 GMT+01:00 2015: Thrall placed a tile in column 3].
+Thu Oct 15 22:44:09 GMT+01:00 2015: Arthas placed a tile in column 3].
+Thu Oct 15 22:44:09 GMT+01:00 2015: Thrall placed a tile in column 0].
+Thu Oct 15 22:44:09 GMT+01:00 2015: Arthas placed a tile in column 0].
+Thu Oct 15 22:44:09 GMT+01:00 2015: Thrall placed a tile in column 0].
+Thu Oct 15 22:44:09 GMT+01:00 2015: Arthas placed a tile in column 1].
+Thu Oct 15 22:44:09 GMT+01:00 2015: Thrall placed a tile in column 1].
+Thu Oct 15 22:44:09 GMT+01:00 2015: Arthas placed a tile in column 1].
+Thu Oct 15 22:44:09 GMT+01:00 2015: Thrall placed a tile in column 2].
+Thu Oct 15 22:44:09 GMT+01:00 2015: Thrall won!
+Thu Oct 15 22:44:09 GMT+01:00 2015: Thrall tried to place a tile in column: 6 but it was full.
+Thu Oct 15 22:44:09 GMT+01:00 2015: Thrall tried to place a tile in column: 4 but it was full.
+Thu Oct 15 22:44:09 GMT+01:00 2015: Thrall tried to place a tile in column: 4 but it was full.
+Thu Oct 15 22:45:33 GMT+01:00 2015: Board was reset.
+Thu Oct 15 22:46:17 GMT+01:00 2015: Board was reset.
+Thu Oct 15 22:47:53 GMT+01:00 2015: Board was reset.
+Thu Oct 15 22:47:53 GMT+01:00 2015: Arthas placed a tile in column 1].
+Thu Oct 15 22:47:53 GMT+01:00 2015: Thrall placed a tile in column 2].
+Thu Oct 15 22:47:53 GMT+01:00 2015: Arthas placed a tile in column 5].
+Thu Oct 15 22:47:53 GMT+01:00 2015: Thrall placed a tile in column 5].
+Thu Oct 15 22:47:53 GMT+01:00 2015: Arthas placed a tile in column 4].
+Thu Oct 15 22:47:53 GMT+01:00 2015: Thrall placed a tile in column 3].
+Thu Oct 15 22:47:53 GMT+01:00 2015: Arthas placed a tile in column 3].
+Thu Oct 15 22:47:53 GMT+01:00 2015: Thrall placed a tile in column 4].
+Thu Oct 15 22:47:53 GMT+01:00 2015: Arthas placed a tile in column 5].
+Thu Oct 15 22:47:53 GMT+01:00 2015: Thrall placed a tile in column 6].
+Thu Oct 15 22:47:53 GMT+01:00 2015: Arthas placed a tile in column 6].
+Thu Oct 15 22:47:53 GMT+01:00 2015: Thrall placed a tile in column 6].
+Thu Oct 15 22:47:53 GMT+01:00 2015: Arthas placed a tile in column 6].
+Thu Oct 15 22:47:53 GMT+01:00 2015: Thrall placed a tile in column 6].
+Thu Oct 15 22:52:10 GMT+01:00 2015: Board was reset.
+Thu Oct 15 22:52:10 GMT+01:00 2015: Oskar placed a tile in column 4].
+Thu Oct 15 22:52:10 GMT+01:00 2015: Kevin placed a tile in column 2].
+Thu Oct 15 22:52:10 GMT+01:00 2015: Oskar placed a tile in column 2].
+Thu Oct 15 22:52:10 GMT+01:00 2015: Kevin placed a tile in column 3].
+Thu Oct 15 22:52:10 GMT+01:00 2015: Oskar placed a tile in column 4].
+Thu Oct 15 22:52:10 GMT+01:00 2015: Kevin placed a tile in column 5].
+Thu Oct 15 22:52:10 GMT+01:00 2015: Oskar placed a tile in column 6].
+Thu Oct 15 22:53:14 GMT+01:00 2015: Board was reset.
+Thu Oct 15 22:53:14 GMT+01:00 2015: Oskar placed a tile in column 2].
+Thu Oct 15 22:53:14 GMT+01:00 2015: Kevin placed a tile in column 1].
+Thu Oct 15 22:53:14 GMT+01:00 2015: Oskar placed a tile in column 1].
+Thu Oct 15 22:53:14 GMT+01:00 2015: Kevin placed a tile in column 2].
+Thu Oct 15 22:53:14 GMT+01:00 2015: Oskar placed a tile in column 4].
+Thu Oct 15 22:53:14 GMT+01:00 2015: Kevin placed a tile in column 4].
+Thu Oct 15 22:53:14 GMT+01:00 2015: Oskar placed a tile in column 5].
+Thu Oct 15 22:53:14 GMT+01:00 2015: Kevin placed a tile in column 5].
+Thu Oct 15 22:53:14 GMT+01:00 2015: Oskar placed a tile in column 6].
+Thu Oct 15 22:53:14 GMT+01:00 2015: Kevin placed a tile in column 6].
+Thu Oct 15 22:53:14 GMT+01:00 2015: Oskar placed a tile in column 5].
+Thu Oct 15 22:53:14 GMT+01:00 2015: Kevin placed a tile in column 4].
+Thu Oct 15 22:53:14 GMT+01:00 2015: Oskar placed a tile in column 4].
+Thu Oct 15 22:53:14 GMT+01:00 2015: Kevin placed a tile in column 3].
+Thu Oct 15 22:53:14 GMT+01:00 2015: Oskar placed a tile in column 3].
+Thu Oct 15 22:53:14 GMT+01:00 2015: Kevin placed a tile in column 6].
+Thu Oct 15 22:53:14 GMT+01:00 2015: Oskar placed a tile in column 5].
+Thu Oct 15 22:53:14 GMT+01:00 2015: Kevin placed a tile in column 6].
+Thu Oct 15 22:53:14 GMT+01:00 2015: Oskar placed a tile in column 5].
+Thu Oct 15 22:53:14 GMT+01:00 2015: Kevin placed a tile in column 6].
+Thu Oct 15 22:53:14 GMT+01:00 2015: Kevin won!
+Thu Oct 15 22:54:55 GMT+01:00 2015: Board was reset.
+Thu Oct 15 22:54:55 GMT+01:00 2015: Arthas placed a tile in column 1].
+Thu Oct 15 22:54:55 GMT+01:00 2015: Thrall placed a tile in column 0].
+Thu Oct 15 22:54:55 GMT+01:00 2015: Arthas placed a tile in column 0].
+Thu Oct 15 22:54:55 GMT+01:00 2015: Thrall placed a tile in column 1].
+Thu Oct 15 22:54:55 GMT+01:00 2015: Arthas placed a tile in column 2].
+Thu Oct 15 22:54:55 GMT+01:00 2015: Thrall placed a tile in column 4].
+Thu Oct 15 22:54:55 GMT+01:00 2015: Arthas placed a tile in column 5].
+Thu Oct 15 22:54:55 GMT+01:00 2015: Thrall placed a tile in column 5].
+Thu Oct 15 22:54:55 GMT+01:00 2015: Arthas placed a tile in column 5].
+Thu Oct 15 22:54:55 GMT+01:00 2015: Thrall placed a tile in column 4].
+Thu Oct 15 22:54:55 GMT+01:00 2015: Arthas placed a tile in column 3].
+Thu Oct 15 22:54:55 GMT+01:00 2015: Thrall placed a tile in column 3].
+Thu Oct 15 22:54:55 GMT+01:00 2015: Arthas placed a tile in column 3].
+Thu Oct 15 22:54:55 GMT+01:00 2015: Thrall placed a tile in column 5].
+Thu Oct 15 22:54:55 GMT+01:00 2015: Arthas placed a tile in column 6].
+Thu Oct 15 22:54:55 GMT+01:00 2015: Thrall placed a tile in column 6].
+Thu Oct 15 22:54:55 GMT+01:00 2015: Thrall won!
+Thu Oct 15 23:07:34 GMT+01:00 2015: Board was reset.
+Thu Oct 15 23:08:30 GMT+01:00 2015: Board was reset.
