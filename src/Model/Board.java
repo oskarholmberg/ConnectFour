@@ -14,6 +14,7 @@ public class Board {
     protected int player = 0;
     private ArrayList<Player> players = new ArrayList<>();
     protected int nbrOfPlayers = 2;
+    private int winLength = 4;
     protected ArrayList<Player> currentPlayers = new ArrayList<>();
     private StringBuilder auditlog;
     private Calendar cal;
@@ -32,20 +33,22 @@ public class Board {
     }
 
     /**
-     * Attempts to place a color in selected column and checks if that placement rendered a win condition.
+     * Attempts to place a tile in selected column and checks if that placement rendered a win condition.
+     * If column is full, board remains the same. If win condition is caused board is locked.
      *
-     * @param column, the selected column for placing color.
+     * @param column, the selected column for placing tile.
      * @return 1 if placement caused win condition, 0 if successful placement, -1 if column is full.
      */
     public int put(int column) {
         if (column < width && !locked) {
             int slot = nextAvailableSlot(column);
             if (slot != -1) {
+                Player p = currentPlayers.get(player);
                 matrix[column][slot] = player;
-                log(cal.getTime().toString() + ": " + currentPlayers.get(player).getName() + " placed a tile in column " + column + "].\n");
+                auditlog.append(cal.getTime().toString() + ": " + p.getName() + " placed a tile in column " + column + "].\n");
                 if (winningMove()) {
-                    log(cal.getTime().toString() + ": " + currentPlayers.get(player).getName() + " won!\n");
-                    currentPlayers.get(player).won();
+                    auditlog.append(cal.getTime().toString() + ": " + p.getName() + " won!\n");
+                    p.won();
                     sortList();
                     locked = true;
                     return 1;
@@ -54,7 +57,7 @@ public class Board {
                 return 0;
             }
         }
-        log(cal.getTime().toString() + ": " + currentPlayers.get(player).getName() + " tried to place a tile in column: " + column + " but it was full.\n");
+        auditlog.append(cal.getTime().toString() + ": " + currentPlayers.get(player).getName() + " tried to place a tile in column: " + column + " but it was full.\n");
         return -1;
     }
 
@@ -68,10 +71,10 @@ public class Board {
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
                 if (matrix[j][i] != -1) { // No point in starting at an empty position
-                    if (checkRight(j, i, 1)) return true;
-                    if (checkUp(j, i, 1)) return true;
-                    if (checkDiagonalRight(j, i, 1)) return true;
-                    if (checkDiagonalLeft(j, i, 1)) return true;
+                    if (checkRight(j, i, winLength - 1)) return true; // -1 since we already have found 1.
+                    if (checkUp(j, i, winLength - 1)) return true;
+                    if (checkDiagonalRight(j, i, winLength - 1)) return true;
+                    if (checkDiagonalLeft(j, i, winLength - 1)) return true;
                 }
             }
         }
@@ -79,11 +82,25 @@ public class Board {
     }
 
     /**
-     * Clears board
+     * Checks if the parameter player is the winner of the game.
+     *
+     * @param p, player to evaluate.
+     * @return, true if player is the winner, false if not the winner or no winner exists.
+     */
+
+    public boolean isWinner(Player p) {
+        if(winningMove()) {
+            return p.equals(currentPlayers.get(player));
+        }
+        return false;
+    }
+
+    /**
+     * Clears board of all tiles and unlocks it.
      */
     public void reset() {
         locked = false;
-        log(cal.getTime().toString() + ": Board was reset.\n");
+        auditlog.append(cal.getTime().toString() + ": Board was reset.\n");
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
                 matrix[j][i] = -1;
@@ -91,9 +108,25 @@ public class Board {
         }
     }
 
+
+    /**
+     * Returns the matrix representation of the board.
+     *
+     * @return, matrix representation of the board.
+     */
+
     public int[][] getMatrix() {
         return matrix;
     }
+
+    /**
+     * Searches through existing players for player with corresponding name and
+     * adds that player to the current players on the board.
+     * If that player is not found a new player will be created and added.
+     * If parameter name is "Bot" a ME bot will be added instead.
+     *
+     * @param name, Name of player to be added.
+     */
 
     public void addPlayer(String name) {
         //Make sure that playerNbr is not out of bounds.
@@ -109,7 +142,7 @@ public class Board {
         } else {
             Player p = null;
             if (name.equals("Bot")) {
-                p = new AIPlayer(name);
+                p = new AIPlayer("Jarvis");
             } else {
                 p = new HumanPlayer(name);
                 players.add(p);
@@ -118,17 +151,22 @@ public class Board {
         }
     }
 
-    public String[] getPlayerNames() {
-        String[] names = new String[nbrOfPlayers];
-        for (int i = 0; i < nbrOfPlayers; i++) {
-            names[i] = currentPlayers.get(i).getName();
-        }
-        return names;
-    }
+    /**
+     * Returns an integer representation of the current player.
+     * Player 1 will be 0, Player 2 will be 1 and so on.
+     *
+     * @return, Integer representation of current player.
+     */
 
     public int getPlayer() {
         return player;
     }
+
+    /**
+     * Returns String representation of the audit log.
+     *
+     * @return, String representation of audit log.
+     */
 
     public String getAuditLog() {
         return auditlog.toString();
@@ -137,16 +175,34 @@ public class Board {
     public int getWidth() {
         return width;
     }
+    public int getHeight(){
+        return height;
+    }
+    public int getWinLength(){
+        return winLength;
+    }
 
+
+    @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < height; i++) {
-            for (int j = 0; j < width; j++) {
-                sb.append(matrix[j][i] + "\t");
-            }
-            sb.append("\n");
+        StringBuffer result = new StringBuffer();
+        for (int x = 0; x < width; x++) {
+            result.append((x + 1) + " ");
         }
-        return sb.toString();
+        result.append(System.lineSeparator());
+        for (int y = 0; y < height; y++) {
+            for (int x = 0; x < width; x++) {
+                if (matrix[x][y] == 0) {
+                    result.append("R ");
+                } else if (matrix[x][y] == 1) {
+                    result.append("B ");
+                } else {
+                    result.append(". ");
+                }
+            }
+            result.append(System.lineSeparator());
+        }
+        return result.toString();
     }
 
     /**
@@ -174,11 +230,11 @@ public class Board {
      */
     private boolean checkRight(int w, int h, int inARow) {
         try {
-            if (inARow == 4) {
+            if (inARow == 0) {
                 return true;
             }
             if (matrix[w][h] == matrix[w + 1][h]) {
-                return checkRight(w + 1, h, inARow + 1);
+                return checkRight(w + 1, h, inARow - 1);
             }
         } catch (IndexOutOfBoundsException e) {
             return false;
@@ -196,11 +252,11 @@ public class Board {
      */
     private boolean checkUp(int w, int h, int inARow) {
         try {
-            if (inARow == 4) {
+            if (inARow == 0) {
                 return true;
             }
             if (matrix[w][h] == matrix[w][h - 1]) {
-                return checkUp(w, h - 1, inARow + 1);
+                return checkUp(w, h - 1, inARow - 1);
             }
         } catch (IndexOutOfBoundsException e) {
             return false;
@@ -218,11 +274,11 @@ public class Board {
      */
     private boolean checkDiagonalRight(int w, int h, int inARow) {
         try {
-            if (inARow == 4) {
+            if (inARow == 0) {
                 return true;
             }
             if (matrix[w][h] == matrix[w + 1][h - 1]) {
-                return checkDiagonalRight(w + 1, h - 1, inARow + 1);
+                return checkDiagonalRight(w + 1, h - 1, inARow - 1);
             }
         } catch (IndexOutOfBoundsException e) {
             return false;
@@ -240,11 +296,11 @@ public class Board {
      */
     private boolean checkDiagonalLeft(int w, int h, int inARow) {
         try {
-            if (inARow == 4) {
+            if (inARow == 0) {
                 return true;
             }
             if (matrix[w][h] == matrix[w - 1][h - 1]) {
-                return checkDiagonalLeft(w - 1, h - 1, inARow + 1);
+                return checkDiagonalLeft(w - 1, h - 1, inARow - 1);
             }
         } catch (IndexOutOfBoundsException e) {
             return false;
@@ -252,12 +308,9 @@ public class Board {
         return false;
     }
 
-    private void log(String s) {
-        auditlog.append(s);
-    }
-
     /**
-     * Gets the 10 players with most wins.
+     * Gets the 10 players with most wins, each element contains the name of the
+     * player and that players number of wins.
      *
      * @return, Sorted String[] with best player at index 0 and worst index 9.
      */
@@ -266,7 +319,8 @@ public class Board {
         int i = 0;
         //While there are entries AND 10 entries havnt been selected.
         while (players.size() > i && i < 10) {
-            top10[i] = players.get(i).getName();
+            Player p = players.get(i);
+            top10[i] = (p.getName() + " \t\t with " + p.getNbrWins() + " wins");
             i++;
         }
         // Fill in empty slots.
@@ -276,6 +330,12 @@ public class Board {
         }
         return top10;
     }
+
+    /**
+     * Returns the players engaged in the current game.
+     *
+     * @return, ArrayList<Player>, Players currently playing on this board.
+     */
 
     public ArrayList<Player> getCurrentPlayers() {
         return currentPlayers;
@@ -289,10 +349,9 @@ public class Board {
     }
 
     /**
-     * Loads the persistent data for the audit log and players.
-     * Uses a trick with java.util.Scanner to access an java.io.InputStream from it.
-     * Scanner iterates over tokens in the stream, by using the "beginning of input" (\A) as a delimiter
-     * only one token is given for the entire content of the stream.
+     * Tries to load the persistent data for the audit log and players.
+     * Searches for files auditlog.txt and players.txt in application file path.
+     * If these do not exist nothing will happen.
      */
     private void load() {
         try {
@@ -312,9 +371,13 @@ public class Board {
                 players.add(p);
             }
         } catch (IOException e) {
-            e.printStackTrace();
         }
     }
+
+    /**
+     * Saves the audit log and all players that have played to file in application file path.
+     * If these do not exist they will be created.
+     */
 
     public void save() {
         BufferedWriter auditWriter = null;

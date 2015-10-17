@@ -49,6 +49,12 @@ public class GamePaneController {
         main.showMainPane();
     }
 
+    /**
+     * Calculates which column was clicked and tries to place a tile there.
+     * If the next player in turn is an AIPlayer that AIPlayers move is calculated
+     * and performed.
+     * @param event, MouseEvent from click.
+     */
     @FXML
     void gridClicked(MouseEvent event) {
         EventTarget target = event.getTarget();
@@ -59,11 +65,13 @@ public class GamePaneController {
         if (won == 1) {
             main.showWinDialog();
         }
+        //Checks if next player in line is an AIPlayer.
+        //If so that AIPlayers turn is performed.
         Player p = board.getCurrentPlayers().get(board.getPlayer());
         if (p instanceof AIPlayer) {
             won = board.put(((AIPlayer) p).getColumn(board));
-            setTurn();
             paint();
+            setTurn();
             if (won == 1) {
                 main.showWinDialog();
             }
@@ -79,8 +87,12 @@ public class GamePaneController {
         this.board = board;
     }
 
+    /**
+     * Changes the color of the circle showing next tile color.
+     */
+
     public void setTurn() {
-        turnLabel.setText(board.getPlayerNames()[board.getPlayer()] + "'s turn!");
+        turnLabel.setText(board.getCurrentPlayers().get(board.getPlayer()).getName() + "'s turn!");
         if (board.getPlayer() == 0) {
             coin.setFill(Paint.valueOf("red"));
         }
@@ -88,6 +100,11 @@ public class GamePaneController {
             coin.setFill(Paint.valueOf("blue"));
         }
     }
+
+    /**
+     * Paints all tiles in the view to correspond with the
+     * board.
+     */
 
     private void paint() {
         matrix = board.getMatrix();

@@ -43,7 +43,7 @@ public class WinDialogController {
 
     public void setBoard(Board board){
         this.board = board;
-        winningPlayerLabel.setText(board.getPlayerNames()[board.getPlayer()]+ " won!");
+        winningPlayerLabel.setText(board.getCurrentPlayers().get(board.getPlayer()).getName()+ " won!");
     }
 
     public void setDialog(Stage dialogStage){

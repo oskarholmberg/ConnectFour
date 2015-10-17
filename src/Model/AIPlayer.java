@@ -5,14 +5,23 @@ package Model;
  */
 public class AIPlayer extends Player implements Comparable<Player> {
 
-    private int difficulty = 6;
-    //will cause win
+    /**
+     * The AI calculates DIFFICULTY moves ahead.
+     */
+    static final int DIFFICULTY = 6;
+    /**
+     * Value given to trail leading to win.
+     */
     static final float WIN = 1f;
-    //will cause loss
+    /**
+     * Value given to trail leading to loss.
+     */
     static final float LOSE = -1f;
-    //will cause loss in next move
+    /**
+     * Value given to trail leading to loss
+     * the next turn.
+     */
     static final float BAD = 0f;
-    static final int HUMAN = 0, AI = 1;
 
     private AIBoard board;
 
@@ -20,20 +29,26 @@ public class AIPlayer extends Player implements Comparable<Player> {
         super(name);
     }
 
-    public int compareTo(Player p) {
-        return -1;
-    }
-
+    /**
+     * Calculates the most favourable column
+     * to place tile.
+     * @param b, board to evaluate
+     * @return, column of best placement starting
+     * index 0.
+     */
     public int getColumn(Board b) {
         board = new AIBoard(b.getMatrix(), b.getCurrentPlayers());
-        double maxValue = Integer.MIN_VALUE;
+        double maxValue = 2. * Integer.MIN_VALUE;
         int move = 0;
-        //Search the board for best move.
-        //Stops search if WIN has been found since that will
-        //cause a win condition in next move.
+
+        //Look through every column to find the best
+        //possible move. If value = WIN that means that
+        //if you do the move you win. So search can stop there
         for (int column = 0; column < board.getWidth(); column++) {
-            if (board.nextAvailableSlot(column) != -1) {
-                //Compare current score to the next and change if higher.
+            if (board.nextAvailableSlot(column)!=-1) {
+                // Compare the previous best
+                // move with the new one and
+                // swap if the new move is better.
                 double value = moveValue(column);
                 if (value > maxValue) {
                     maxValue = value;
@@ -47,41 +62,53 @@ public class AIPlayer extends Player implements Comparable<Player> {
         return move;
     }
 
-    double moveValue(int column) {
-        // To determine the value of a move, first
-        // make the move, estimate that state and
-        // then undo the move again.
-        board.makeMove(column, AI);
-        double val = alphabeta(difficulty, Integer.MIN_VALUE, Integer.MAX_VALUE, false);
-        board.undoMove(column, AI);
+    private double moveValue(int column) {
+        // In order to calculate the best move,
+        // the move is done, given a value and
+        // removed.
+        board.makeMoveAI(column);
+        double val = alphabeta(DIFFICULTY, Integer.MIN_VALUE, Integer.MAX_VALUE, false);
+        board.undoMoveAI(column);
         return val;
     }
 
-    double alphabeta(int depth, double alpha, double beta, boolean maximizingPlayer) {
+    // Recursive call using the minmax algorithm and alpha beta pruning.
+    // Since the AIPlayer wants to win, it will try to maximize the value
+    // of it's moves and at the same time minimizing the value of the
+    // opponents moves. So by building a tree where the children to each
+    // node are all possible moves in that state and taking turns in choosing the
+    // highest(max) value and lowest(min) value and let these values bubble upwards.
+    // The best possible move can be found.
+    // Video description: https://www.youtube.com/watch?v=2xsXEpdyDUg
+    private double alphabeta(int depth, double alpha, double beta, boolean maximizingPlayer) {
         boolean hasWinner = board.winningMove();
-        // All these conditions lead to a
-        // termination of the recursion
+        // If there is a winner or the
+        // depth is 0 (the number of predicting
+        // stages have been completed) we're done!
         if (depth == 0 || hasWinner) {
             double score = 0;
             if (hasWinner) {
-                score = board.getPlayerNames()[board.getPlayer()].equals(name) ? LOSE : WIN; // compare this name to the name of the current player.
+                score = board.isWinner(this) ? WIN : LOSE;
             } else {
                 score = BAD;
             }
-            //Since the depth here will start at a higher value
-            //and decrease with each recursion.
-            //The score is calculated like this to enforce that
-            //something good will happen the next move it gets a higher
-            //score than if it would happen after 5 turns.
-            System.out.println(score / (difficulty - depth + 1));
-            return score / (difficulty - depth + 1);
+            // Small tweak in order to give a
+            // higher score to good moves that
+            // are higher up in the recursive call.
+            // For instance: It is better to
+            // prevent a bad thing from happening
+            // the next turn rather than in five turns.
+            // And vice versa for good things.
+            return score / (DIFFICULTY - depth + 1);
         }
+
         if (maximizingPlayer) {
-            for (int column = 0; column < board.getWidth(); column++) {
-                if (board.nextAvailableSlot(column) != -1) {
-                    board.makeMove(column, AI);
+            for (int column = 0; column < board
+                    .getWidth(); column++) {
+                if (board.nextAvailableSlot(column)!= -1) {
+                    board.makeMoveAI(column);
                     alpha = Math.max(alpha, alphabeta(depth - 1, alpha, beta, false));
-                    board.undoMove(column, AI);
+                    board.undoMoveAI(column);
                     if (beta <= alpha) {
                         break;
                     }
@@ -89,11 +116,12 @@ public class AIPlayer extends Player implements Comparable<Player> {
             }
             return alpha;
         } else {
-            for (int column = 0; column < board.getWidth(); column++) {
-                if (board.nextAvailableSlot(column) != -1) {
-                    board.makeMove(column, HUMAN);
+            for (int column = 0; column < board
+                    .getWidth(); column++) {
+                if (board.nextAvailableSlot(column)!=-1) {
+                    board.makeMoveOpponent(column);
                     beta = Math.min(beta, alphabeta(depth - 1, alpha, beta, true));
-                    board.undoMove(column, HUMAN);
+                    board.undoMoveOpponent(column);
                     if (beta <= alpha) {
                         break;
                     }
@@ -101,6 +129,15 @@ public class AIPlayer extends Player implements Comparable<Player> {
             }
             return beta;
         }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o instanceof AIPlayer) {
+            Player p = (AIPlayer) o;
+            return p.getName().equals(name);
+        }
+        return false;
     }
 }
 

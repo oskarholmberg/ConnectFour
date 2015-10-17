@@ -10,4 +10,12 @@ public class HumanPlayer extends Player implements Comparable<Player>{
     public HumanPlayer(String name){
         super(name);
     }
+
+    public boolean equals(Object o){
+        if(o instanceof HumanPlayer){
+            Player p = (HumanPlayer) o;
+            return p.getName().equals(name);
+        }
+        return false;
+    }
 }
