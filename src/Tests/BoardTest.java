@@ -1,7 +1,6 @@
 package Tests;
 
 import Model.Board;
-import junit.framework.Test;
 
 import static org.junit.Assert.*;
 
@@ -13,27 +12,29 @@ public class BoardTest {
     private Board board;
     private int[][] matrix;
 
-    public void init(){
+    public void init() {
         board = new Board();
-        board.addPlayer("Oskar", 0);
-        board.addPlayer("Kevin", 1);
+        board.addPlayer("Oskar");
+        board.addPlayer("Kevin");
         matrix = new int[7][6];
-        for(int i = 0; i < 6; i ++){
-            for(int j = 0; j < 7; j++){
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 7; j++) {
                 matrix[j][i] = -1;
             }
         }
     }
+
     @org.junit.Test
-    public void testGetMatrix(){
-        for(int i = 0; i < 6; i ++){
-            for(int j = 0; j < 7; j++){
-               assertEquals(board.getMatrix()[j][i], matrix[j][i]);
+    public void testGetMatrix() {
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 7; j++) {
+                assertEquals(board.getMatrix()[j][i], matrix[j][i]);
             }
         }
     }
+
     @org.junit.Test
-    public void testPut(){
+    public void testPut() {
         board.put(0);
         board.put(1);
         matrix[0][5] = 0;
@@ -42,14 +43,14 @@ public class BoardTest {
         board.reset();
     }
 
-    public void testWinningMove(){
+    public void testWinningMove() {
         testCheckRight();
         testCheckUp();
         testCheckDiagonalRight();
         testCheckDiagonalLeft();
     }
 
-    private void testCheckRight(){
+    private void testCheckRight() {
         board.put(0);
         assertEquals(board.put(0), 0);
         board.put(1);
@@ -60,7 +61,7 @@ public class BoardTest {
         board.reset();
     }
 
-    private void testCheckUp(){
+    private void testCheckUp() {
         board.put(0);
         assertEquals(board.put(1), 0);
         board.put(0);
@@ -71,7 +72,7 @@ public class BoardTest {
         board.reset();
     }
 
-    public void testCheckDiagonalRight(){
+    public void testCheckDiagonalRight() {
         assertEquals(0, board.put(0));
         assertEquals(0, board.put(1));
         assertEquals(0, board.put(1));
@@ -86,7 +87,7 @@ public class BoardTest {
         board.reset();
     }
 
-    public void testCheckDiagonalLeft(){
+    public void testCheckDiagonalLeft() {
         assertEquals(0, board.put(0));
         assertEquals(0, board.put(1));
         assertEquals(0, board.put(1));
@@ -103,5 +104,4 @@ public class BoardTest {
         assertEquals(1, board.put(0));
         board.reset();
     }
-
 }

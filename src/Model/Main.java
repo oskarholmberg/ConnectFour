@@ -113,6 +113,29 @@ public class Main extends Application {
         }
     }
 
+    public void showSoloNameDialog(){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../View/soloNameDialog.fxml"));
+            AnchorPane dialogPane = (AnchorPane) loader.load();
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle("Player");
+            dialogStage.setResizable(false);
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            dialogStage.initOwner(primaryStage);
+            Scene scene = new Scene(dialogPane);
+            dialogStage.setScene(scene);
+            SoloNameDialogController controller = loader.getController();
+            controller.setMain(this);
+            controller.setBoard(board);
+            controller.setDialogStage(dialogStage);
+
+            dialogStage.showAndWait();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public void showWinDialog(){
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../View/winDialog.fxml"));

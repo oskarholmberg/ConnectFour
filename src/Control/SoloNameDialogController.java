@@ -7,30 +7,27 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class NameDialogController {
+public class SoloNameDialogController {
 
     private Main main;
-    private Stage dialogStage;
     private Board board;
+    private Stage dialogStage;
 
     @FXML
-    private TextField player1;
-
-    @FXML
-    private TextField player2;
-
-    @FXML
-    void cancelClicked(ActionEvent event) {
-        dialogStage.close();
-    }
+    private TextField name;
 
     @FXML
     void okClicked(ActionEvent event) {
         dialogStage.close();
-        board.addPlayer(player1.getText());
-        board.addPlayer(player2.getText());
+        board.addPlayer(name.getText());
+        board.addPlayer("Bot");
         board.reset();
         main.showGamePane();
+    }
+
+    @FXML
+    void cancelClicked(ActionEvent event) {
+        dialogStage.close();
     }
 
     public void setDialogStage(Stage stage){

@@ -1,7 +1,6 @@
 package Control;
 
-import Model.Board;
-import Model.Main;
+import Model.*;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.event.EventTarget;
@@ -19,6 +18,7 @@ import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -59,7 +59,17 @@ public class GamePaneController {
         if (won == 1) {
             main.showWinDialog();
         }
+        Player p = board.getCurrentPlayers().get(board.getPlayer());
+        if (p instanceof AIPlayer) {
+            won = board.put(((AIPlayer) p).getColumn(board));
+            setTurn();
+            paint();
+            if (won == 1) {
+                main.showWinDialog();
+            }
+        }
     }
+
 
     public void setMain(Main main) {
         this.main = main;
@@ -69,7 +79,7 @@ public class GamePaneController {
         this.board = board;
     }
 
-    public void setTurn(){
+    public void setTurn() {
         turnLabel.setText(board.getPlayerNames()[board.getPlayer()] + "'s turn!");
         if (board.getPlayer() == 0) {
             coin.setFill(Paint.valueOf("red"));

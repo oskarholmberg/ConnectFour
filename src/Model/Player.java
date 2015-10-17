@@ -3,10 +3,10 @@ package Model;
 /**
  * Created by Oskar on 2015-10-15.
  */
-public class Player implements Comparable<Player>{
+public abstract class Player implements Comparable<Player>{
 
-    private String name;
-    private int wins;
+    protected String name;
+    protected int wins;
 
     public Player(String name){
         this.name=name;

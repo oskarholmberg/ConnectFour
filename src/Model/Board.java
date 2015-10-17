@@ -8,13 +8,13 @@ import java.util.*;
  */
 public class Board {
 
-    private int height = 6;
-    private int width = 7;
-    private int[][] matrix;
-    private int player = 0;
+    protected int height = 6;
+    protected int width = 7;
+    protected int[][] matrix;
+    protected int player = 0;
     private ArrayList<Player> players = new ArrayList<>();
-    private int nbrOfPlayers = 2;
-    private Player[] currentPlayers = new Player[nbrOfPlayers];
+    protected int nbrOfPlayers = 2;
+    protected ArrayList<Player> currentPlayers = new ArrayList<>();
     private StringBuilder auditlog;
     private Calendar cal;
     private boolean locked = false;
@@ -42,10 +42,10 @@ public class Board {
             int slot = nextAvailableSlot(column);
             if (slot != -1) {
                 matrix[column][slot] = player;
-                log(cal.getTime().toString() + ": " + currentPlayers[player].getName() + " placed a tile in column " + column + "].\n");
+                log(cal.getTime().toString() + ": " + currentPlayers.get(player).getName() + " placed a tile in column " + column + "].\n");
                 if (winningMove()) {
-                    log(cal.getTime().toString() + ": " + currentPlayers[player].getName() + " won!\n");
-                    currentPlayers[player].won();
+                    log(cal.getTime().toString() + ": " + currentPlayers.get(player).getName() + " won!\n");
+                    currentPlayers.get(player).won();
                     sortList();
                     locked = true;
                     return 1;
@@ -54,7 +54,7 @@ public class Board {
                 return 0;
             }
         }
-        log(cal.getTime().toString() + ": " + currentPlayers[player].getName() + " tried to place a tile in column: " + column + " but it was full.\n");
+        log(cal.getTime().toString() + ": " + currentPlayers.get(player).getName() + " tried to place a tile in column: " + column + " but it was full.\n");
         return -1;
     }
 
@@ -64,7 +64,7 @@ public class Board {
      *
      * @return true if a player has won, false otherwise.
      */
-    private boolean winningMove() {
+    public boolean winningMove() {
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
                 if (matrix[j][i] != -1) { // No point in starting at an empty position
@@ -95,27 +95,34 @@ public class Board {
         return matrix;
     }
 
-    public void addPlayer(String name, int playerNbr) {
+    public void addPlayer(String name) {
         //Make sure that playerNbr is not out of bounds.
-        if (playerNbr < nbrOfPlayers) {
-            if (players.contains(new Player(name))) {
-                for (Player p : players) {
-                    if (p.getName().equals(name)) {
-                        currentPlayers[playerNbr] = p;
-                    }
+        if (currentPlayers.size() >= nbrOfPlayers) {
+            currentPlayers.clear();
+        }
+        if (players.contains(new HumanPlayer(name))) {
+            for (Player p : players) {
+                if (p.getName().equals(name)) {
+                    currentPlayers.add(p);
                 }
-            } else {
-                Player p = new Player(name);
-                players.add(p);
-                currentPlayers[playerNbr] = p;
             }
+        } else {
+            Player p = null;
+            if (name.equals("Bot")) {
+                p = new AIPlayer(name);
+            } else {
+                p = new HumanPlayer(name);
+                players.add(p);
+            }
+            currentPlayers.add(p);
         }
     }
 
     public String[] getPlayerNames() {
-        String[] names = new String[2];
-        names[0] = currentPlayers[0].getName();
-        names[1] = currentPlayers[1].getName();
+        String[] names = new String[nbrOfPlayers];
+        for (int i = 0; i < nbrOfPlayers; i++) {
+            names[i] = currentPlayers.get(i).getName();
+        }
         return names;
     }
 
@@ -125,6 +132,10 @@ public class Board {
 
     public String getAuditLog() {
         return auditlog.toString();
+    }
+
+    public int getWidth() {
+        return width;
     }
 
     public String toString() {
@@ -144,7 +155,7 @@ public class Board {
      * @param column, column to be evaluated.
      * @return index for next available slot in that column. -1 if full.
      */
-    private int nextAvailableSlot(int column) {
+    public int nextAvailableSlot(int column) {
         for (int i = height - 1; i >= 0; i--) {
             if (matrix[column][i] == -1) {
                 return i;
@@ -266,6 +277,10 @@ public class Board {
         return top10;
     }
 
+    public ArrayList<Player> getCurrentPlayers() {
+        return currentPlayers;
+    }
+
     /**
      * Sort list depending on highest number of wins.
      */
@@ -284,7 +299,7 @@ public class Board {
             Scanner auditScan = new Scanner(new File("auditlog.txt"));
             Scanner playerScan = new Scanner(new File("players.txt"));
             while (auditScan.hasNext()) {
-                auditlog.append(auditScan.nextLine()+"\n");
+                auditlog.append(auditScan.nextLine() + "\n");
             }
             String name;
             int wins;
@@ -292,7 +307,7 @@ public class Board {
                 String[] line = playerScan.nextLine().split(":");
                 name = line[0];
                 wins = Integer.parseInt(line[1]);
-                Player p = new Player(name);
+                Player p = new HumanPlayer(name);
                 p.setNbrWins(wins);
                 players.add(p);
             }
@@ -308,8 +323,8 @@ public class Board {
             auditWriter = new BufferedWriter(new FileWriter("auditlog.txt"));
             playerWriter = new BufferedWriter(new FileWriter("players.txt"));
             auditWriter.write(getAuditLog());
-            for(Player p:players){
-                playerWriter.write(p.getName()+":"+p.getNbrWins()+"\n");
+            for (Player p : players) {
+                playerWriter.write(p.getName() + ":" + p.getNbrWins() + "\n");
             }
         } catch (IOException e) {
             e.printStackTrace();

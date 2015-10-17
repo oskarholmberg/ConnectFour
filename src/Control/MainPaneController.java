@@ -28,6 +28,10 @@ public class MainPaneController {
         main.showAuditLog();
     }
 
+    @FXML
+    void newGameButton(ActionEvent event) {
+        main.showSoloNameDialog();
+    }
 
     @FXML
     void quitButton(ActionEvent event) {
