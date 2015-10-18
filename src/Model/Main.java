@@ -38,7 +38,7 @@ public class Main extends Application {
             this.primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
                 @Override
                 public void handle(WindowEvent windowEvent) {
-                    board.save();
+                    board.save(); // Save board before exit.
                     Platform.exit();
                 }
             });

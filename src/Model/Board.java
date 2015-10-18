@@ -8,22 +8,59 @@ import java.util.*;
  */
 public class Board {
 
-    protected int height = 6;
-    protected int width = 7;
+    /**
+     * Board height, width and number of tiles in a row needed to win
+     */
+
+    protected int height = 6, width = 7, winLength = 4;
+    /**
+     * Matrix representing the board.
+     */
     protected int[][] matrix;
+    /**
+     * The active player, i.e. the index of the player
+     * who's turn it is in the list of current players.
+     */
     protected int player = 0;
+    /**
+     * All players (except AIPlayers) that have played.
+     */
     private ArrayList<Player> players = new ArrayList<>();
+    /**
+     * Max amount of simultaneously playing players.
+     */
     protected int nbrOfPlayers = 2;
-    private int winLength = 4;
+
+    /**
+     * List of players currently playing a game.
+     */
     protected ArrayList<Player> currentPlayers = new ArrayList<>();
+    /**
+     * The audit log.
+     */
     private StringBuilder auditlog;
+    /**
+     * Calendar object for generating date objects for the audit log.
+     */
     private Calendar cal;
+    /**
+     * If locked = true you may not perform changes to the board.
+     * Is set to true when a winner is found and false when board
+     * is reset.
+     */
     private boolean locked = false;
+
+    /**
+     * Constructor. Standard size of board is 6x7 and
+     * you need 4 tiles in a row to win.
+     */
 
     public Board() {
         auditlog = new StringBuilder();
+        //Load the persistant data.
         load();
         cal = Calendar.getInstance();
+        //Fill the matrix.
         matrix = new int[width][height];
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
@@ -37,13 +74,16 @@ public class Board {
      * If column is full, board remains the same. If win condition is caused board is locked.
      *
      * @param column, the selected column for placing tile.
-     * @return 1 if placement caused win condition, 0 if successful placement, -1 if column is full.
+     * @return 1 if placement caused win condition, 0 if successful placement, -1 if column is full or out of bounds.
      */
     public int put(int column) {
-        if (column < width && !locked) {
+        //Check that column is within bounds, and board is not locked.
+        if (column < width && column >= 0 && !locked) {
             int slot = nextAvailableSlot(column);
+            // Check if column is full.
             if (slot != -1) {
                 Player p = currentPlayers.get(player);
+                //Place index of active player in chosen column.
                 matrix[column][slot] = player;
                 auditlog.append(cal.getTime().toString() + ": " + p.getName() + " placed a tile in column " + column + "].\n");
                 if (winningMove()) {
@@ -53,11 +93,12 @@ public class Board {
                     locked = true;
                     return 1;
                 }
+                //Change the active player to the next player in line.
                 player = (player + 1) % nbrOfPlayers;
                 return 0;
             }
         }
-        auditlog.append(cal.getTime().toString() + ": " + currentPlayers.get(player).getName() + " tried to place a tile in column: " + column + " but it was full.\n");
+        auditlog.append(cal.getTime().toString() + ": " + currentPlayers.get(player).getName() + " tried to place a tile in column: " + column + " but was unsuccessful.\n");
         return -1;
     }
 
@@ -120,10 +161,11 @@ public class Board {
     }
 
     /**
+     * Adds a player to the game.
      * Searches through existing players for player with corresponding name and
      * adds that player to the current players on the board.
      * If that player is not found a new player will be created and added.
-     * If parameter name is "Bot" a ME bot will be added instead.
+     * If parameter name is "Bot" a AIPlayer will be added instead.
      *
      * @param name, Name of player to be added.
      */
@@ -140,7 +182,7 @@ public class Board {
                 }
             }
         } else {
-            Player p = null;
+            Player p;
             if (name.equals("Bot")) {
                 p = new AIPlayer("Jarvis");
             } else {
@@ -172,16 +214,14 @@ public class Board {
         return auditlog.toString();
     }
 
+    /**
+     * Get board width
+     * @return Width of board.
+     */
+
     public int getWidth() {
         return width;
     }
-    public int getHeight(){
-        return height;
-    }
-    public int getWinLength(){
-        return winLength;
-    }
-
 
     @Override
     public String toString() {

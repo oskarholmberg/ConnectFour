@@ -18,8 +18,9 @@ public class AIPlayer extends Player implements Comparable<Player> {
      */
     static final float LOSE = -1f;
     /**
-     * Value given to trail leading to loss
-     * the next turn.
+     * Value given to trail leading to inevitable
+     * loss the next turn (providing that the other
+     * player is rational).
      */
     static final float BAD = 0f;
 

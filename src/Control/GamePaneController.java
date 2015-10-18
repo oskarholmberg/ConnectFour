@@ -58,7 +58,8 @@ public class GamePaneController {
     @FXML
     void gridClicked(MouseEvent event) {
         EventTarget target = event.getTarget();
-        int column = (int) (((event.getSceneX() - 14) / 50));//calculate which column was clicked. -14 due to alignment.
+        //Calculate which column was clicked. -14 due to alignment and 50 due to grid column width.
+        int column = (int) (((event.getSceneX() - 14) / 50));
         won = board.put(column);
         setTurn();
         paint();
@@ -88,7 +89,9 @@ public class GamePaneController {
     }
 
     /**
-     * Changes the color of the circle showing next tile color.
+     * Changes the color of the circle showing next tile color and
+     * the name displayed above it to the currently active player
+     * on the Board.
      */
 
     public void setTurn() {

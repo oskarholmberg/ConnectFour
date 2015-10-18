@@ -35,6 +35,7 @@ public class MainPaneController {
 
     @FXML
     void quitButton(ActionEvent event) {
+        //Save the audit log and list of Players to file.
         board.save();
         Platform.exit();
     }

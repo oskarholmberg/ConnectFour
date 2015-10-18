@@ -30,3 +30,28 @@ Sat Oct 17 22:15:53 GMT+01:00 2015: Oskar placed a tile in column 4].
 Sat Oct 17 22:15:53 GMT+01:00 2015: Jarvis placed a tile in column 2].
 Sat Oct 17 22:15:53 GMT+01:00 2015: Oskar placed a tile in column 3].
 Sat Oct 17 22:15:53 GMT+01:00 2015: Oskar won!
+Sun Oct 18 12:14:19 GMT+01:00 2015: Board was reset.
+Sun Oct 18 12:14:19 GMT+01:00 2015: Oskar placed a tile in column 3].
+Sun Oct 18 12:14:19 GMT+01:00 2015: Jarvis placed a tile in column 0].
+Sun Oct 18 12:14:19 GMT+01:00 2015: Oskar placed a tile in column 3].
+Sun Oct 18 12:14:19 GMT+01:00 2015: Jarvis placed a tile in column 0].
+Sun Oct 18 12:14:19 GMT+01:00 2015: Oskar placed a tile in column 3].
+Sun Oct 18 12:14:19 GMT+01:00 2015: Jarvis placed a tile in column 3].
+Sun Oct 18 12:14:19 GMT+01:00 2015: Oskar placed a tile in column 4].
+Sun Oct 18 12:14:19 GMT+01:00 2015: Jarvis placed a tile in column 2].
+Sun Oct 18 12:14:19 GMT+01:00 2015: Oskar placed a tile in column 1].
+Sun Oct 18 12:14:19 GMT+01:00 2015: Jarvis placed a tile in column 0].
+Sun Oct 18 12:14:19 GMT+01:00 2015: Oskar placed a tile in column 0].
+Sun Oct 18 12:14:19 GMT+01:00 2015: Jarvis placed a tile in column 0].
+Sun Oct 18 12:14:19 GMT+01:00 2015: Oskar placed a tile in column 4].
+Sun Oct 18 12:14:19 GMT+01:00 2015: Jarvis placed a tile in column 2].
+Sun Oct 18 12:14:19 GMT+01:00 2015: Oskar placed a tile in column 2].
+Sun Oct 18 12:14:19 GMT+01:00 2015: Jarvis placed a tile in column 2].
+Sun Oct 18 12:14:19 GMT+01:00 2015: Oskar placed a tile in column 4].
+Sun Oct 18 12:14:19 GMT+01:00 2015: Jarvis placed a tile in column 4].
+Sun Oct 18 12:14:19 GMT+01:00 2015: Oskar placed a tile in column 5].
+Sun Oct 18 12:14:19 GMT+01:00 2015: Jarvis placed a tile in column 6].
+Sun Oct 18 12:14:19 GMT+01:00 2015: Oskar placed a tile in column 5].
+Sun Oct 18 12:14:19 GMT+01:00 2015: Jarvis placed a tile in column 0].
+Sun Oct 18 12:14:19 GMT+01:00 2015: Oskar placed a tile in column 5].
+Sun Oct 18 12:14:19 GMT+01:00 2015: Oskar won!
