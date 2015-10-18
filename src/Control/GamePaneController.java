@@ -67,9 +67,10 @@ public class GamePaneController {
             main.showWinDialog();
         }
         //Checks if next player in line is an AIPlayer.
-        //If so that AIPlayers turn is performed.
+        //If so that AIPlayers turn is performed
+        // unless the HumanPlayer just won.
         Player p = board.getCurrentPlayers().get(board.getPlayer());
-        if (p instanceof AIPlayer) {
+        if (p instanceof AIPlayer && won != 1) {
             won = board.put(((AIPlayer) p).getColumn(board));
             paint();
             setTurn();

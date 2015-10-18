@@ -29,7 +29,7 @@ public class Main extends Application {
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("Connect Four");
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../View/rootLayoutPane.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/rootLayoutPane.fxml"));
             rootLayout = (BorderPane) loader.load();
             Scene scene = new Scene(rootLayout, 600, 400);
             this.primaryStage.setScene(scene);
@@ -50,7 +50,7 @@ public class Main extends Application {
 
     public void showMainPane() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../View/mainPane.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/mainPane.fxml"));
             Pane mainPane = (Pane) loader.load();
             rootLayout.setCenter(mainPane);
             MainPaneController controller = loader.getController();
@@ -64,7 +64,7 @@ public class Main extends Application {
 
     public void showGamePane(){
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../View/gamePane.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/gamePane.fxml"));
             Pane gamePane = (Pane) loader.load();
             rootLayout.setCenter(gamePane);
             GamePaneController controller = loader.getController();
@@ -78,7 +78,7 @@ public class Main extends Application {
 
     public void showHighscorePane(){
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../View/highscorePane.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/highscorePane.fxml"));
             Pane gamePane = (Pane) loader.load();
             rootLayout.setCenter(gamePane);
             HighscorePaneController controller = loader.getController();
@@ -92,7 +92,7 @@ public class Main extends Application {
 
     public void showNameDialog(){
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../View/nameDialog.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/nameDialog.fxml"));
             AnchorPane dialogPane = (AnchorPane) loader.load();
             Stage dialogStage = new Stage();
             dialogStage.setTitle("Players");
@@ -115,7 +115,7 @@ public class Main extends Application {
 
     public void showSoloNameDialog(){
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../View/soloNameDialog.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/soloNameDialog.fxml"));
             AnchorPane dialogPane = (AnchorPane) loader.load();
             Stage dialogStage = new Stage();
             dialogStage.setTitle("Player");
@@ -138,7 +138,7 @@ public class Main extends Application {
 
     public void showWinDialog(){
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../View/winDialog.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/winDialog.fxml"));
             AnchorPane dialogPane = (AnchorPane) loader.load();
             Stage dialogStage = new Stage();
             dialogStage.setTitle("WINNER!");
@@ -160,7 +160,7 @@ public class Main extends Application {
 
     public void showAuditLog(){
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../View/auditLogPane.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/auditLogPane.fxml"));
             BorderPane pane = (BorderPane) loader.load();
             Stage dialogStage = new Stage();
             dialogStage.setTitle("Audit log");

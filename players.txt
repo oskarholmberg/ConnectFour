@@ -1,3 +1,5 @@
+Oskar:4
+Illidan:1
 Vol'jin:0
 Uther:0
 Valeera:0
@@ -8,3 +10,4 @@ Garrosh:0
 Jaina:0
 Thrall:0
 Arthas:0
+Kevin:0

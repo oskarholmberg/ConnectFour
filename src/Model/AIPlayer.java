@@ -8,7 +8,7 @@ public class AIPlayer extends Player implements Comparable<Player> {
     /**
      * The AI calculates DIFFICULTY moves ahead.
      */
-    static final int DIFFICULTY = 6;
+    static final int DIFFICULTY = 4;
     /**
      * Value given to trail leading to win.
      */
