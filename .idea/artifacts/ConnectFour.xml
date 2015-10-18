@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="javafx" build-on-make="true" name="ConnectFour">
-    <output-path>$PROJECT_DIR$/out/artifacts/ConnectFour</output-path>
+    <output-path>$PROJECT_DIR$/</output-path>
     <properties id="javafx-properties">
       <options>
         <option name="appClass" value="Model.Main" />
