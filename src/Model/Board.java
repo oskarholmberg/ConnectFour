@@ -57,8 +57,6 @@ public class Board {
 
     public Board() {
         auditlog = new StringBuilder();
-        //Load the persistant data.
-        load();
         cal = Calendar.getInstance();
         //Fill the matrix.
         matrix = new int[width][height];
@@ -67,6 +65,8 @@ public class Board {
                 matrix[j][i] = -1;
             }
         }
+        //Load the persistant data.
+        load();
     }
 
     /**
@@ -403,12 +403,17 @@ public class Board {
             String name;
             int wins;
             while (playerScan.hasNext()) {
-                String[] line = playerScan.nextLine().split(":");
-                name = line[0];
-                wins = Integer.parseInt(line[1]);
-                Player p = new HumanPlayer(name);
-                p.setNbrWins(wins);
-                players.add(p);
+                    String line = playerScan.nextLine();
+                    String[] lines = line.split(":");
+                try {
+                    name = lines[0];
+                    wins = Integer.parseInt(lines[1]);
+                    Player p = new HumanPlayer(name);
+                    p.setNbrWins(wins);
+                    players.add(p);
+                }catch (Exception e){
+                    auditlog.append(cal.getTime().toString() + ": Syntax error when trying to load '" + line +"' in players.txt.");
+                }
             }
         } catch (IOException e) {
         }
