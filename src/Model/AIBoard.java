@@ -16,7 +16,7 @@ public class AIBoard extends Board {
      * Tries to place an opponents tile in given column.
      * If not possible board remains unchanged.
      *
-     * @param column
+     * @param column, column in which to place tile.
      */
     public void makeMoveOpponent(int column) {
         makeMove(column, 0);
@@ -26,7 +26,7 @@ public class AIBoard extends Board {
      * Tries to place a AI tile in given column
      * If not possible board remains unchanged.
      *
-     * @param column
+     * @param column, column in which to place tile.
      */
     public void makeMoveAI(int column) {
                 makeMove(column, 1);
@@ -37,7 +37,7 @@ public class AIBoard extends Board {
      * (Fails if the column is empty or if the top tile
      * does not belong to a player).
      * If not possible board remains the same.
-     * @param column
+     * @param column, column in which to place tile.
      */
     public void undoMoveOpponent(int column) {
         undoMove(column, 0);
