@@ -1,5 +1,5 @@
 # ConnectFour
-IT-case Lunicore
+IT-case Lunicore by Oskar Holmberg
 
 ### Instructions
 To run the program, download ConnectFour.rar, unzip and run ConnectFour.jar.
