@@ -7,13 +7,14 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.MainPaneController">
    <children>
-      <VBox layoutX="231.0" layoutY="78.0" spacing="30.0">
+      <VBox layoutX="218.0" layoutY="50.0" prefHeight="245.0" prefWidth="164.0" spacing="30.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#newGameButton" prefHeight="25.0" prefWidth="138.0" text="New Game" />
-            <Button layoutX="262.0" layoutY="94.0" mnemonicParsing="false" onAction="#multiplayerButtonClicked" text="New Multiplayer Game" />
-            <Button layoutX="260.0" layoutY="147.0" mnemonicParsing="false" onAction="#highscoreButtonClicked" prefHeight="25.0" prefWidth="137.0" text="View Highscore" />
-            <Button layoutX="262.0" layoutY="225.0" mnemonicParsing="false" onAction="#auditlogButtonClicked" prefHeight="25.0" prefWidth="137.0" text="View Audit Log" />
-            <Button mnemonicParsing="false" onAction="#quitButton" prefHeight="25.0" prefWidth="137.0" text="Quit" />
+            <Button mnemonicParsing="false" onAction="#newGameButton" prefHeight="25.0" prefWidth="165.0" text="New Singelplayer Game" />
+            <Button layoutX="262.0" layoutY="94.0" mnemonicParsing="false" onAction="#multiplayerButtonClicked" prefHeight="25.0" prefWidth="165.0" text="New Multiplayer Game" />
+            <Button mnemonicParsing="false" onAction="#optionsButton" prefHeight="25.0" prefWidth="165.0" text="Game Options" />
+            <Button layoutX="260.0" layoutY="147.0" mnemonicParsing="false" onAction="#highscoreButtonClicked" prefHeight="25.0" prefWidth="166.0" text="View Highscore" />
+            <Button layoutX="262.0" layoutY="225.0" mnemonicParsing="false" onAction="#auditlogButtonClicked" prefHeight="25.0" prefWidth="169.0" text="View Audit Log" />
+            <Button mnemonicParsing="false" onAction="#quitButton" prefHeight="25.0" prefWidth="175.0" text="Quit" />
          </children>
       </VBox>
    </children>

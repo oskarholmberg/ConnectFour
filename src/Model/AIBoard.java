@@ -8,9 +8,13 @@ import java.util.ArrayList;
 public class AIBoard extends Board {
 
 
-    public AIBoard(int[][] matrix, ArrayList<Player> currentPlayers){
-        this.matrix = matrix;
-        this.currentPlayers = currentPlayers;
+    public AIBoard(Board board){
+        this.matrix = board.getMatrix();
+        this.currentPlayers = board.getCurrentPlayers();
+        this.height = board.getHeight();
+        this.width = board.getWidth();
+        this.winLength = board.getWinLength();
+        this.nbrOfPlayers = currentPlayers.size();
     }
     /**
      * Tries to place an opponents tile in given column.
@@ -58,6 +62,9 @@ public class AIBoard extends Board {
         if (nextAvailableSlot(column) != -1) {
             matrix[column][nextAvailableSlot(column)] = player;
         }
+        //Change turn.
+        this.player = (this.player+1)%nbrOfPlayers;
+        System.out.println(this.player);
     }
 
     private void undoMove(int column, int player) {

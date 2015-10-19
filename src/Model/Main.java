@@ -70,7 +70,7 @@ public class Main extends Application {
             GamePaneController controller = loader.getController();
             controller.setMain(this);
             controller.setBoard(board);
-            controller.setTurn();
+            controller.reformatGrid();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -85,6 +85,21 @@ public class Main extends Application {
             controller.setMain(this);
             controller.setBoard(board);
             controller.setText();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void showOptionsPane(){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/optionsPane.fxml"));
+            Pane gamePane = (Pane) loader.load();
+            rootLayout.setCenter(gamePane);
+            OptionPaneController controller = loader.getController();
+            controller.setMain(this);
+            controller.setBoard(board);
+            controller.setDifficulty();
+            controller.setSize();
         } catch (IOException e) {
             e.printStackTrace();
         }

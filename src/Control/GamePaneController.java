@@ -11,12 +11,15 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.RowConstraints;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
+import javax.swing.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Observable;
@@ -53,15 +56,16 @@ public class GamePaneController {
      * Calculates which column was clicked and tries to place a tile there.
      * If the next player in turn is an AIPlayer that AIPlayers move is calculated
      * and performed.
+     *
      * @param event, MouseEvent from click.
      */
     @FXML
     void gridClicked(MouseEvent event) {
         EventTarget target = event.getTarget();
         //Calculate which column was clicked. -14 due to alignment and 50 due to grid column width.
-        int column = (int) (((event.getSceneX() - 14) / 50));
-        won = board.put(column);
-        setTurn();
+        int column = (int) (((event.getSceneX() - 19) / (350/board.getWidth())));
+        int row = (int) (((event.getSceneY()) - 75) / (300/board.getHeight()));
+        won = board.put(column, row);
         paint();
         if (won == 1) {
             main.showWinDialog();
@@ -71,9 +75,8 @@ public class GamePaneController {
         // unless the HumanPlayer just won.
         Player p = board.getCurrentPlayers().get(board.getPlayer());
         if (p instanceof AIPlayer && won != 1) {
-            won = board.put(((AIPlayer) p).getColumn(board));
+            won = board.put(((AIPlayer) p).getColumn(board), row);
             paint();
-            setTurn();
             if (won == 1) {
                 main.showWinDialog();
             }
@@ -87,6 +90,7 @@ public class GamePaneController {
 
     public void setBoard(Board board) {
         this.board = board;
+        setTurn();
     }
 
     /**
@@ -95,13 +99,16 @@ public class GamePaneController {
      * on the Board.
      */
 
-    public void setTurn() {
+    private void setTurn() {
         turnLabel.setText(board.getCurrentPlayers().get(board.getPlayer()).getName() + "'s turn!");
         if (board.getPlayer() == 0) {
             coin.setFill(Paint.valueOf("red"));
         }
         if (board.getPlayer() == 1) {
             coin.setFill(Paint.valueOf("blue"));
+        }
+        if (board.getPlayer() == 2) {
+            coin.setFill(Paint.valueOf("green"));
         }
     }
 
@@ -112,15 +119,51 @@ public class GamePaneController {
 
     private void paint() {
         matrix = board.getMatrix();
-        for (int i = 0; i < 7; i++) {
-            for (int j = 5; j >= 0; j--) {
+        for (int i = 0; i < board.getWidth(); i++) {
+            for (int j = board.getHeight()-1; j >= 0; j--) {
                 if (matrix[i][j] == 0) {
-                    boardGrid.add(new Circle(25, Paint.valueOf("red")), i, j);
+                    boardGrid.add(new Circle(boardGrid.getColumnConstraints().get(0).getPrefWidth() / 2, Paint.valueOf("red")), i, j);
                 }
                 if (matrix[i][j] == 1) {
-                    boardGrid.add(new Circle(25, Paint.valueOf("blue")), i, j);
+                    boardGrid.add(new Circle(boardGrid.getColumnConstraints().get(0).getPrefWidth() / 2, Paint.valueOf("blue")), i, j);
+                }
+                if (matrix[i][j] == 2) {
+                    boardGrid.add(new Circle(boardGrid.getColumnConstraints().get(0).getPrefWidth() / 2, Paint.valueOf("green")), i, j);
                 }
             }
+        }
+        setTurn();
+    }
+
+    public void reformatGrid() {
+        int width = boardGrid.getColumnConstraints().size();
+        int height = boardGrid.getRowConstraints().size();
+
+        if (width < board.getWidth()) {
+            for (int i = width; i < board.getWidth(); i++) {
+                boardGrid.getColumnConstraints().add(new ColumnConstraints());
+            }
+        }
+        if (width > board.getWidth()) {
+            for (int i = width-1; i > board.getWidth()-1; i--) {
+                boardGrid.getColumnConstraints().remove(i);
+            }
+        }
+        if (height < board.getHeight()) {
+            for (int i = height; i < board.getHeight(); i++) {
+                boardGrid.getRowConstraints().add(new RowConstraints());
+            }
+        }
+        if (height > board.getHeight()) {
+            for (int i = height-1; i > board.getHeight()-1; i--) {
+                boardGrid.getRowConstraints().remove(i);
+            }
+        }
+        for (int i = 0; i < board.getWidth(); i++) {
+            boardGrid.getColumnConstraints().get(i).setPrefWidth(350 / board.getWidth());
+        }
+        for (int i = 0; i < board.getHeight(); i++) {
+            boardGrid.getRowConstraints().get(i).setPrefHeight(300 / board.getHeight());
         }
     }
 }

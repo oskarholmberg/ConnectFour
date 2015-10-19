@@ -6,7 +6,7 @@
                 url : 'ConnectFour.jnlp'
             },
             {
-                javafx : '2.2+'
+                javafx : '8.0+'
             },
             {}
         );
@@ -15,23 +15,23 @@
 </script>
 
 <script>
-    function javafxEmbed_ConnectFour_id() {
+    function javafxEmbedConnectFour_id() {
         dtjava.embed(
             {
                 id : 'ConnectFour_id',
                 url : 'ConnectFour.jnlp',
                 placeholder : 'javafx-app-placeholder',
-                width : 600,
-                height : 400
+                width : '600',
+                height : '400'
             },
             {
-                javafx : '2.2+'
+                javafx : '8.0+'
             },
             {}
         );
     }
     <!-- Embed FX application into web page once page is loaded -->
-    dtjava.addOnloadCallback(javafxEmbed_ConnectFour_id);
+    dtjava.addOnloadCallback(javafxEmbedConnectFour_id);
 </script>
 
 </head><body>

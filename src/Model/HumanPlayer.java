@@ -18,4 +18,9 @@ public class HumanPlayer extends Player implements Comparable<Player>{
         }
         return false;
     }
+
+    @Override
+    public void setDifficulty(int difficulty) {
+
+    }
 }

@@ -9,6 +9,16 @@ import java.util.*;
 public class Board {
 
     /**
+     * Difficulty levels of AI.
+     */
+
+    public static final int HARD = 8, MEDIUM = 4, EASY = 2;
+
+    /**
+     * Current AI difficulty.
+     */
+    protected int difficulty = MEDIUM;
+    /**
      * Board height, width and number of tiles in a row needed to win
      */
 
@@ -76,29 +86,53 @@ public class Board {
      * @param column, the selected column for placing tile.
      * @return 1 if placement caused win condition, 0 if successful placement, -1 if column is full or out of bounds.
      */
-    public int put(int column) {
-        //Check that column is within bounds, and board is not locked.
-        if (column < width && column >= 0 && !locked) {
-            int slot = nextAvailableSlot(column);
-            // Check if column is full.
-            if (slot != -1) {
-                Player p = currentPlayers.get(player);
-                //Place index of active player in chosen column.
-                matrix[column][slot] = player;
+    public int put(int column, int row) {
+        if (width == 3) {
+            return ticTacToePut(column, row);
+        } else {
+            //Check that column is within bounds, and board is not locked.
+            if (column < width && column >= 0 && !locked) {
+                int slot = nextAvailableSlot(column);
+                // Check if column is full.
+                if (slot != -1) {
+                    Player p = currentPlayers.get(player);
+                    //Place index of active player in chosen column.
+                    matrix[column][slot] = player;
+                    auditlog.append(cal.getTime().toString() + ": " + p.getName() + " placed a tile in column " + column + "].\n");
+                    if (winningMove()) {
+                        auditlog.append(cal.getTime().toString() + ": " + p.getName() + " won!\n");
+                        p.won();
+                        sortList();
+                        locked = true;
+                        return 1;
+                    }
+                    //Change the active player to the next player in line.
+                    player = (player + 1) % nbrOfPlayers;
+                    return 0;
+                }
+            }
+            auditlog.append(cal.getTime().toString() + ": " + currentPlayers.get(player).getName() + " tried to place a tile in column: " + column + " but was unsuccessful.\n");
+            return -1;
+        }
+    }
+
+    private int ticTacToePut(int column, int row){
+       // if(column < 3 && row < 3){
+            Player p = currentPlayers.get(player);
+            if(matrix[column][row] == -1){
+                matrix[column][row] = player;
                 auditlog.append(cal.getTime().toString() + ": " + p.getName() + " placed a tile in column " + column + "].\n");
-                if (winningMove()) {
+                if(winningMove()){
                     auditlog.append(cal.getTime().toString() + ": " + p.getName() + " won!\n");
                     p.won();
                     sortList();
                     locked = true;
                     return 1;
                 }
-                //Change the active player to the next player in line.
                 player = (player + 1) % nbrOfPlayers;
                 return 0;
             }
-        }
-        auditlog.append(cal.getTime().toString() + ": " + currentPlayers.get(player).getName() + " tried to place a tile in column: " + column + " but was unsuccessful.\n");
+      //  }
         return -1;
     }
 
@@ -130,7 +164,7 @@ public class Board {
      */
 
     public boolean isWinner(Player p) {
-        if(winningMove()) {
+        if (winningMove()) {
             return p.equals(currentPlayers.get(player));
         }
         return false;
@@ -185,6 +219,7 @@ public class Board {
             Player p;
             if (name.equals("Bot")) {
                 p = new AIPlayer("Jarvis");
+                p.setDifficulty(difficulty);
             } else {
                 p = new HumanPlayer(name);
                 players.add(p);
@@ -204,6 +239,36 @@ public class Board {
         return player;
     }
 
+    public void setDifficulty(int difficulty) {
+        this.difficulty = difficulty;
+    }
+
+    public int getDifficulty() {
+        return difficulty;
+    }
+
+    /**
+     * Sets the size of the board.
+     */
+    public void setSize(int height, int width) {
+        this.height = height;
+        this.width = width;
+        matrix = new int[width][height];
+        for (int i = 0; i < height; i++) {
+            for (int j = 0; j < width; j++) {
+                matrix[j][i] = -1;
+            }
+        }
+    }
+
+    public int getWinLength() {
+        return winLength;
+    }
+
+    public void setWinLength(int winLength) {
+        this.winLength = winLength;
+    }
+
     /**
      * Returns String representation of the audit log.
      *
@@ -216,11 +281,16 @@ public class Board {
 
     /**
      * Get board width
+     *
      * @return Width of board.
      */
 
     public int getWidth() {
         return width;
+    }
+
+    public int getHeight() {
+        return height;
     }
 
     @Override
@@ -360,7 +430,7 @@ public class Board {
         //While there are entries AND 10 entries havnt been selected.
         while (players.size() > i && i < 10) {
             Player p = players.get(i);
-            top10[i] = (p.getName() + " \t\t with " + p.getNbrWins() + " wins");
+            top10[i] = (p.getName() + "  \t \t  with " + p.getNbrWins() + " wins");
             i++;
         }
         // Fill in empty slots.
@@ -403,16 +473,16 @@ public class Board {
             String name;
             int wins;
             while (playerScan.hasNext()) {
-                    String line = playerScan.nextLine();
-                    String[] lines = line.split(":");
+                String line = playerScan.nextLine();
+                String[] lines = line.split(":");
                 try {
                     name = lines[0];
                     wins = Integer.parseInt(lines[1]);
                     Player p = new HumanPlayer(name);
                     p.setNbrWins(wins);
                     players.add(p);
-                }catch (Exception e){
-                    auditlog.append(cal.getTime().toString() + ": Syntax error when trying to load '" + line +"' in players.txt.");
+                } catch (Exception e) {
+                    auditlog.append(cal.getTime().toString() + ": Syntax error when trying to load '" + line + "' in players.txt.");
                 }
             }
         } catch (IOException e) {

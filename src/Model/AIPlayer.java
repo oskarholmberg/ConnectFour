@@ -6,9 +6,9 @@ package Model;
 public class AIPlayer extends Player implements Comparable<Player> {
 
     /**
-     * The AI calculates DIFFICULTY moves ahead.
+     * The AI calculates difficulty moves ahead.
      */
-    static final int DIFFICULTY = 4;
+    private int difficulty = Board.MEDIUM;
     /**
      * Value given to trail leading to win.
      */
@@ -33,12 +33,13 @@ public class AIPlayer extends Player implements Comparable<Player> {
     /**
      * Calculates the most favourable column
      * to place tile.
+     *
      * @param b, board to evaluate
      * @return, column of best placement starting
      * index 0.
      */
     public int getColumn(Board b) {
-        board = new AIBoard(b.getMatrix(), b.getCurrentPlayers());
+        board = new AIBoard(b);
         double maxValue = 2. * Integer.MIN_VALUE;
         int move = 0;
 
@@ -46,7 +47,7 @@ public class AIPlayer extends Player implements Comparable<Player> {
         //possible move. If value = WIN that means that
         //if you do the move you win. So search can stop there
         for (int column = 0; column < board.getWidth(); column++) {
-            if (board.nextAvailableSlot(column)!=-1) {
+            if (board.nextAvailableSlot(column) != -1) {
                 // Compare the previous best
                 // move with the new one and
                 // swap if the new move is better.
@@ -68,7 +69,7 @@ public class AIPlayer extends Player implements Comparable<Player> {
         // the move is done, given a value and
         // removed.
         board.makeMoveAI(column);
-        double val = alphabeta(DIFFICULTY, Integer.MIN_VALUE, Integer.MAX_VALUE, false);
+        double val = alphabeta(difficulty, Integer.MIN_VALUE, Integer.MAX_VALUE, false);
         board.undoMoveAI(column);
         return val;
     }
@@ -100,13 +101,13 @@ public class AIPlayer extends Player implements Comparable<Player> {
             // prevent a bad thing from happening
             // the next turn rather than in five turns.
             // And vice versa for good things.
-            return score / (DIFFICULTY - depth + 1);
+            return score / (difficulty - depth + 1);
         }
 
         if (maximizingPlayer) {
             for (int column = 0; column < board
                     .getWidth(); column++) {
-                if (board.nextAvailableSlot(column)!= -1) {
+                if (board.nextAvailableSlot(column) != -1) {
                     board.makeMoveAI(column);
                     alpha = Math.max(alpha, alphabeta(depth - 1, alpha, beta, false));
                     board.undoMoveAI(column);
@@ -119,7 +120,7 @@ public class AIPlayer extends Player implements Comparable<Player> {
         } else {
             for (int column = 0; column < board
                     .getWidth(); column++) {
-                if (board.nextAvailableSlot(column)!=-1) {
+                if (board.nextAvailableSlot(column) != -1) {
                     board.makeMoveOpponent(column);
                     beta = Math.min(beta, alphabeta(depth - 1, alpha, beta, true));
                     board.undoMoveOpponent(column);
@@ -130,6 +131,10 @@ public class AIPlayer extends Player implements Comparable<Player> {
             }
             return beta;
         }
+    }
+
+    public void setDifficulty(int difficulty) {
+        this.difficulty = difficulty;
     }
 
     @Override

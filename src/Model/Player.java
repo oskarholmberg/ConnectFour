@@ -43,6 +43,8 @@ public abstract class Player implements Comparable<Player>{
 
     public abstract boolean equals(Object o);
 
+    public abstract void setDifficulty(int difficulty);
+
     public int compareTo(Player p){
         if(wins < p.getNbrWins()) return 1;
         if(wins > p.getNbrWins()) return -1;
