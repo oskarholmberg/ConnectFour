@@ -3,6 +3,8 @@ package Control;
 import Model.Board;
 import Model.Main;
 import javafx.event.ActionEvent;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -33,12 +35,23 @@ public class NameDialogController {
         dialogStage.close();
     }
 
-    public void setDialogStage(Stage stage){
+    public void setDialogStage(Stage stage) {
         dialogStage = stage;
     }
 
-    public void setMain(Main main){this.main = main;}
+    public void setMain(Main main) {
+        this.main = main;
+    }
 
-    public void setBoard(Board board){this.board = board;}
+    public void setBoard(Board board) {
+        this.board = board;
+    }
 
+
+    @FXML
+    void keyReleased(KeyEvent event) {
+        if (event.getCode() == KeyCode.ENTER) {
+            okClicked(null);
+        }
+    }
 }

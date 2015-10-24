@@ -19,12 +19,20 @@ public class AIPlayer extends Player implements Comparable<Player> {
     static final float LOSE = -1f;
     /**
      * Value given to trail leading to inevitable
-     * loss the next turn (providing that the other
-     * player is rational).
+     * loss "difficulty" number of steps ahead
+     * (providing that the other player is rational
+     * and does not make a mistake).
      */
     static final float BAD = 0f;
 
     private AIBoard board;
+
+    /**
+     * Constructor. AIPlayer for a four in a row game.
+     * Will try it's best to win but will not postpone
+     * an unstoppable demise.
+     * @param name, name of AIPlayer
+     */
 
     public AIPlayer(String name) {
         super(name);

@@ -1,14 +1,12 @@
 package Control;
 
-import Model.*;
+import Model.AIPlayer;
+import Model.Board;
+import Model.Main;
+import Model.Player;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.event.EventTarget;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.ColumnConstraints;
@@ -17,13 +15,6 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.RowConstraints;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
-import javafx.stage.Stage;
-
-import javax.swing.*;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Observable;
-import java.util.Observer;
 
 public class GamePaneController {
 
@@ -62,9 +53,8 @@ public class GamePaneController {
     @FXML
     void gridClicked(MouseEvent event) {
         EventTarget target = event.getTarget();
-        //Calculate which column was clicked. -14 due to alignment and 50 due to grid column width.
-        int column = (int) (((event.getSceneX() - 19) / (350/board.getWidth())));
-        int row = (int) (((event.getSceneY()) - 75) / (300/board.getHeight()));
+        int column = (int) ((event.getX() / (350/board.getWidth())));
+        int row = (int) ((event.getY()) / (300/board.getHeight()));
         won = board.put(column, row);
         paint();
         if (won == 1) {

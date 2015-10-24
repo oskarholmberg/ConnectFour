@@ -5,6 +5,8 @@ import Model.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
 public class SoloNameDialogController {
@@ -27,6 +29,13 @@ public class SoloNameDialogController {
         board.reset();
         main.showGamePane();
         dialogStage.close();
+    }
+
+    @FXML
+    void keyReleased(KeyEvent event) {
+        if (event.getCode() == KeyCode.ENTER) {
+            okClicked(null);
+        }
     }
 
     @FXML
