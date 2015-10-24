@@ -1,8 +1,6 @@
-Oskar:34
+Arthas:3
 Illidan:1
 Rexxar:1
-Joel:1
-Attoff:1
 Vol'jin:0
 Uther:0
 Valeera:0
@@ -11,10 +9,3 @@ Anduin:0
 Garrosh:0
 Jaina:0
 Thrall:0
-Arthas:0
-Joacim:0
-Jocce:0
-Kocke:0
-Jocke:0
-Kevin:0
-Kevv:0

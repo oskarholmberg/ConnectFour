@@ -8,12 +8,12 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.OptionPaneController">
    <children>
-      <Label layoutX="198.0" layoutY="50.0" text="Game Options" AnchorPane.topAnchor="50.0">
+      <Label layoutX="198.0" layoutY="13.0" text="Game Options" AnchorPane.topAnchor="13.0">
          <font>
             <Font size="32.0" />
          </font>
       </Label>
-      <GridPane alignment="CENTER" layoutX="150.0" layoutY="122.0" AnchorPane.topAnchor="122.0">
+      <GridPane alignment="CENTER" layoutX="150.0" layoutY="60.0" AnchorPane.topAnchor="60.0">
         <columnConstraints>
           <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -39,9 +39,9 @@
          </children>
       </GridPane>
       <Button layoutX="486.0" layoutY="308.0" mnemonicParsing="false" onAction="#backButton" text="Back" AnchorPane.bottomAnchor="67.0" AnchorPane.rightAnchor="73.0" />
-      <GridPane alignment="CENTER" layoutX="150.0" layoutY="243.0">
+      <GridPane alignment="CENTER" layoutX="150.0" layoutY="155.0">
          <children>
-            <Label prefHeight="21.0" prefWidth="130.0" text="Tic tac toe (no AI)" GridPane.rowIndex="1" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="130.0" text="Tic tac toe" GridPane.rowIndex="1" />
             <Label text="6x7" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Label text="10x11" GridPane.columnIndex="2" GridPane.rowIndex="1" />
             <RadioButton fx:id="tictactoeRadioButton" mnemonicParsing="false" onAction="#setTicTacToe" GridPane.rowIndex="2" />
@@ -64,5 +64,10 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
       </GridPane>
+      <Slider fx:id="slider" blockIncrement="1.0" layoutX="163.0" layoutY="301.0" majorTickUnit="4.0" max="6.0" min="3.0" prefHeight="14.0" prefWidth="274.0" showTickMarks="true" snapToTicks="true" />
+      <Label layoutX="167.0" layoutY="268.0" text="3" />
+      <Label layoutX="255.0" layoutY="268.0" text="4" />
+      <Label layoutX="341.0" layoutY="268.0" text="5" />
+      <Label layoutX="427.0" layoutY="268.0" text="6" />
    </children>
 </AnchorPane>

@@ -2,14 +2,21 @@ package Control;
 
 import Model.Board;
 import Model.Main;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.RadioButton;
+import javafx.scene.control.Slider;
+import javafx.scene.input.DragEvent;
 
 public class OptionPaneController {
 
     private Main main;
     private Board board;
+
+    @FXML
+    private Slider slider;
 
     @FXML
     private RadioButton mediumRadioButton;
@@ -123,5 +130,19 @@ public class OptionPaneController {
             mediumRadioButton.setDisable(false);
             hardRadioButton.setDisable(false);
         }
+    }
+
+    public void setSlider(){
+        slider.setValue(board.getWinLength());
+    }
+
+    @FXML
+    public void initialize(){
+        slider.valueProperty().addListener(new ChangeListener<Number>() {
+            @Override
+            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+                board.setWinLength((int)slider.getValue());
+            }
+        });
     }
 }

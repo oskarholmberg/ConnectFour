@@ -100,6 +100,7 @@ public class Main extends Application {
             controller.setBoard(board);
             controller.setDifficulty();
             controller.setSize();
+            controller.setSlider();
         } catch (IOException e) {
             e.printStackTrace();
         }
