@@ -64,10 +64,15 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
       </GridPane>
-      <Slider fx:id="slider" blockIncrement="1.0" layoutX="163.0" layoutY="301.0" majorTickUnit="4.0" max="6.0" min="3.0" prefHeight="14.0" prefWidth="274.0" showTickMarks="true" snapToTicks="true" />
-      <Label layoutX="167.0" layoutY="268.0" text="3" />
-      <Label layoutX="255.0" layoutY="268.0" text="4" />
-      <Label layoutX="341.0" layoutY="268.0" text="5" />
-      <Label layoutX="427.0" layoutY="268.0" text="6" />
+      <Slider fx:id="slider" blockIncrement="1.0" layoutX="163.0" layoutY="314.0" majorTickUnit="4.0" max="6.0" min="3.0" prefHeight="14.0" prefWidth="274.0" showTickMarks="true" snapToTicks="true" />
+      <Label layoutX="167.0" layoutY="285.0" text="3" />
+      <Label layoutX="255.0" layoutY="285.0" text="4" />
+      <Label layoutX="341.0" layoutY="283.0" text="5" />
+      <Label layoutX="427.0" layoutY="283.0" text="6" />
+      <Label layoutX="254.0" layoutY="255.0" text="Win length">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

@@ -1,4 +1,4 @@
-Arthas:3
+Arthas:4
 Illidan:1
 Rexxar:1
 Vol'jin:0
