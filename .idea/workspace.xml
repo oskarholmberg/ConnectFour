@@ -8,8 +8,10 @@
   <component name="ChangeListManager">
     <list default="true" id="8c182164-c10d-4d9f-87b4-e554fdd8df25" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ConnectFour.jnlp" afterPath="$PROJECT_DIR$/ConnectFour.jnlp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auditlog.txt" afterPath="$PROJECT_DIR$/auditlog.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ConnectFour/View/optionsPane.fxml" afterPath="$PROJECT_DIR$/out/production/ConnectFour/View/optionsPane.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/optionsPane.fxml" afterPath="$PROJECT_DIR$/src/View/optionsPane.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/players.txt" afterPath="$PROJECT_DIR$/players.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ConnectFour.iws" />
@@ -32,34 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="OptionPaneController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Control/OptionPaneController.java">
+      <file leaf-file-name="auditlog.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/auditlog.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="135" column="46" selection-start-line="135" selection-start-column="46" selection-end-line="135" selection-end-column="46" />
-              <folding>
-                <element signature="e#3551#3552#0" expanded="true" />
-                <element signature="e#3604#3605#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="players.txt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/players.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.076576576">
-              <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="102" column="35" selection-start-line="102" selection-start-column="35" selection-end-line="102" selection-end-column="35" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -123,7 +102,6 @@
         <option value="$PROJECT_DIR$/src/Control/HighscorePaneController.java" />
         <option value="$PROJECT_DIR$/src/Model/AIBoard2.java" />
         <option value="$PROJECT_DIR$/src/Model/AIPlayer2.java" />
-        <option value="$PROJECT_DIR$/auditlog.txt" />
         <option value="$PROJECT_DIR$/src/View/mainPane.fxml" />
         <option value="$PROJECT_DIR$/src/View/optionsPane.fxml" />
         <option value="$PROJECT_DIR$/src/Model/Player.java" />
@@ -140,6 +118,7 @@
         <option value="$PROJECT_DIR$/src/Model/Main.java" />
         <option value="$PROJECT_DIR$/src/Control/OptionPaneController.java" />
         <option value="$PROJECT_DIR$/players.txt" />
+        <option value="$PROJECT_DIR$/auditlog.txt" />
       </list>
     </option>
   </component>
@@ -543,8 +522,8 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32937366" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22875817" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24673203" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22875817" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24673203" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1913767" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -915,13 +894,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/auditlog.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49774775">
-          <caret line="13" column="24" selection-start-line="0" selection-start-column="0" selection-end-line="1517" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/AIPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.45945945">
@@ -980,21 +952,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Control/OptionPaneController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="135" column="46" selection-start-line="135" selection-start-column="46" selection-end-line="135" selection-end-column="46" />
-          <folding>
-            <element signature="e#3551#3552#0" expanded="true" />
-            <element signature="e#3604#3605#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/players.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.076576576">
           <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Control/OptionPaneController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.3558558">
+          <caret line="135" column="46" selection-start-line="135" selection-start-column="46" selection-end-line="135" selection-end-column="46" />
+          <folding>
+            <element signature="e#3551#3552#0" expanded="false" />
+            <element signature="e#3604#3605#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auditlog.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
