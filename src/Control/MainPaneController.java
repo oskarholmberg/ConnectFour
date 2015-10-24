@@ -30,10 +30,6 @@ public class MainPaneController {
 
     @FXML
     void newGameButton(ActionEvent event) {
-        if(board.getWidth() == 3){
-            board.setWinLength(4);
-            board.setSize(6,7);
-        }
         main.showSoloNameDialog();
     }
 

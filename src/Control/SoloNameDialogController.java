@@ -18,11 +18,15 @@ public class SoloNameDialogController {
 
     @FXML
     void okClicked(ActionEvent event) {
-        dialogStage.close();
+        if(board.getWidth() == 3){
+            board.setWinLength(4);
+            board.setSize(6,7);
+        }
         board.addPlayer(name.getText());
         board.addPlayer("Bot");
         board.reset();
         main.showGamePane();
+        dialogStage.close();
     }
 
     @FXML

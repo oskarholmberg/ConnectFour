@@ -1360,3 +1360,111 @@ Mon Oct 19 20:28:17 CEST 2015: Jarvis placed a tile in column 0].
 Mon Oct 19 20:28:17 CEST 2015: Oskar placed a tile in column 5].
 Mon Oct 19 20:28:17 CEST 2015: Jarvis placed a tile in column 0].
 Mon Oct 19 20:28:17 CEST 2015: Jarvis won!
+Sat Oct 24 17:43:05 CEST 2015: Board was reset.
+Sat Oct 24 17:43:05 CEST 2015: Oskar placed a tile in column 5].
+Sat Oct 24 17:43:05 CEST 2015: Jarvis placed a tile in column 0].
+Sat Oct 24 17:43:05 CEST 2015: Oskar placed a tile in column 4].
+Sat Oct 24 17:43:05 CEST 2015: Jarvis placed a tile in column 3].
+Sat Oct 24 17:43:05 CEST 2015: Oskar placed a tile in column 5].
+Sat Oct 24 17:43:05 CEST 2015: Jarvis placed a tile in column 0].
+Sat Oct 24 17:43:05 CEST 2015: Oskar placed a tile in column 6].
+Sat Oct 24 17:43:05 CEST 2015: Jarvis placed a tile in column 7].
+Sat Oct 24 17:43:05 CEST 2015: Oskar placed a tile in column 6].
+Sat Oct 24 17:43:05 CEST 2015: Jarvis placed a tile in column 0].
+Sat Oct 24 17:43:05 CEST 2015: Oskar placed a tile in column 0].
+Sat Oct 24 17:43:05 CEST 2015: Jarvis placed a tile in column 1].
+Sat Oct 24 17:43:05 CEST 2015: Oskar placed a tile in column 4].
+Sat Oct 24 17:43:05 CEST 2015: Jarvis placed a tile in column 7].
+Sat Oct 24 17:43:05 CEST 2015: Oskar placed a tile in column 4].
+Sat Oct 24 17:43:05 CEST 2015: Jarvis placed a tile in column 2].
+Sat Oct 24 17:43:05 CEST 2015: Jarvis won!
+Sat Oct 24 17:43:05 CEST 2015: Board was reset.
+Sat Oct 24 17:43:05 CEST 2015: Jarvis placed a tile in column 5].
+Sat Oct 24 17:43:05 CEST 2015: Board was reset.
+Sat Oct 24 17:47:40 CEST 2015: Board was reset.
+Sat Oct 24 17:49:00 CEST 2015: Board was reset.
+Sat Oct 24 17:49:00 CEST 2015: Oskar placed a tile in column 1].
+Sat Oct 24 17:49:00 CEST 2015: Kevin placed a tile in column 2].
+Sat Oct 24 17:49:00 CEST 2015: Oskar placed a tile in column 2].
+Sat Oct 24 17:49:00 CEST 2015: Kevin placed a tile in column 2].
+Sat Oct 24 17:49:00 CEST 2015: Oskar placed a tile in column 0].
+Sat Oct 24 17:49:00 CEST 2015: Oskar won!
+Sat Oct 24 17:49:00 CEST 2015: Board was reset.
+Sat Oct 24 17:49:00 CEST 2015: Oskar placed a tile in column 1].
+Sat Oct 24 17:49:00 CEST 2015: Kevin placed a tile in column 2].
+Sat Oct 24 17:49:00 CEST 2015: Oskar placed a tile in column 0].
+Sat Oct 24 17:49:00 CEST 2015: Kevin placed a tile in column 2].
+Sat Oct 24 17:49:00 CEST 2015: Oskar placed a tile in column 2].
+Sat Oct 24 17:49:00 CEST 2015: Kevin placed a tile in column 0].
+Sat Oct 24 17:49:00 CEST 2015: Oskar placed a tile in column 1].
+Sat Oct 24 17:49:00 CEST 2015: Kevin placed a tile in column 1].
+Sat Oct 24 17:49:00 CEST 2015: Oskar placed a tile in column 0].
+Sat Oct 24 17:59:53 CEST 2015: Board was reset.
+Sat Oct 24 17:59:53 CEST 2015: Oskar placed a tile in column 2].
+Sat Oct 24 17:59:53 CEST 2015: Kevin placed a tile in column 1].
+Sat Oct 24 17:59:53 CEST 2015: Oskar placed a tile in column 1].
+Sat Oct 24 17:59:53 CEST 2015: Kevin placed a tile in column 2].
+Sat Oct 24 17:59:53 CEST 2015: Oskar placed a tile in column 0].
+Sat Oct 24 17:59:53 CEST 2015: Kevin placed a tile in column 0].
+Sat Oct 24 17:59:53 CEST 2015: Oskar placed a tile in column 1].
+Sat Oct 24 17:59:53 CEST 2015: Kevin placed a tile in column 0].
+Sat Oct 24 17:59:53 CEST 2015: Oskar placed a tile in column 2].
+Sat Oct 24 17:59:53 CEST 2015: Oskar won!
+Sat Oct 24 17:59:53 CEST 2015: Board was reset.
+Sat Oct 24 17:59:53 CEST 2015: Board was reset.
+Sat Oct 24 17:59:53 CEST 2015: Oskar placed a tile in column 4].
+Sat Oct 24 17:59:53 CEST 2015: Jarvis placed a tile in column 0].
+Sat Oct 24 17:59:53 CEST 2015: Oskar placed a tile in column 3].
+Sat Oct 24 17:59:53 CEST 2015: Jarvis placed a tile in column 2].
+Sat Oct 24 17:59:53 CEST 2015: Oskar placed a tile in column 5].
+Sat Oct 24 17:59:53 CEST 2015: Jarvis placed a tile in column 6].
+Sat Oct 24 17:59:53 CEST 2015: Oskar placed a tile in column 5].
+Sat Oct 24 17:59:53 CEST 2015: Jarvis placed a tile in column 0].
+Sat Oct 24 17:59:53 CEST 2015: Oskar placed a tile in column 5].
+Sat Oct 24 17:59:53 CEST 2015: Jarvis placed a tile in column 5].
+Sat Oct 24 17:59:53 CEST 2015: Oskar placed a tile in column 4].
+Sat Oct 24 17:59:53 CEST 2015: Jarvis placed a tile in column 0].
+Sat Oct 24 17:59:53 CEST 2015: Oskar placed a tile in column 0].
+Sat Oct 24 17:59:53 CEST 2015: Jarvis placed a tile in column 2].
+Sat Oct 24 17:59:53 CEST 2015: Oskar placed a tile in column 3].
+Sat Oct 24 17:59:53 CEST 2015: Jarvis placed a tile in column 6].
+Sat Oct 24 17:59:53 CEST 2015: Oskar placed a tile in column 4].
+Sat Oct 24 17:59:53 CEST 2015: Jarvis placed a tile in column 0].
+Sat Oct 24 17:59:53 CEST 2015: Oskar placed a tile in column 4].
+Sat Oct 24 17:59:53 CEST 2015: Oskar won!
+Sat Oct 24 17:59:53 CEST 2015: Board was reset.
+Sat Oct 24 17:59:53 CEST 2015: Board was reset.
+Sat Oct 24 17:59:53 CEST 2015: Oskar placed a tile in column 3].
+Sat Oct 24 17:59:53 CEST 2015: Jarvis placed a tile in column 0].
+Sat Oct 24 17:59:53 CEST 2015: Oskar placed a tile in column 4].
+Sat Oct 24 17:59:53 CEST 2015: Jarvis placed a tile in column 2].
+Sat Oct 24 17:59:53 CEST 2015: Oskar placed a tile in column 5].
+Sat Oct 24 17:59:53 CEST 2015: Jarvis placed a tile in column 6].
+Sat Oct 24 17:59:53 CEST 2015: Oskar placed a tile in column 4].
+Sat Oct 24 17:59:53 CEST 2015: Jarvis placed a tile in column 0].
+Sat Oct 24 17:59:53 CEST 2015: Oskar placed a tile in column 3].
+Sat Oct 24 17:59:53 CEST 2015: Jarvis placed a tile in column 0].
+Sat Oct 24 17:59:53 CEST 2015: Oskar placed a tile in column 0].
+Sat Oct 24 17:59:53 CEST 2015: Jarvis placed a tile in column 2].
+Sat Oct 24 17:59:53 CEST 2015: Oskar placed a tile in column 5].
+Sat Oct 24 17:59:53 CEST 2015: Jarvis placed a tile in column 6].
+Sat Oct 24 17:59:53 CEST 2015: Oskar placed a tile in column 3].
+Sat Oct 24 17:59:53 CEST 2015: Jarvis placed a tile in column 0].
+Sat Oct 24 17:59:53 CEST 2015: Board was reset.
+Sat Oct 24 17:59:53 CEST 2015: Oskar placed a tile in column 0].
+Sat Oct 24 17:59:53 CEST 2015: Kevin placed a tile in column 0].
+Sat Oct 24 17:59:53 CEST 2015: Oskar placed a tile in column 1].
+Sat Oct 24 17:59:53 CEST 2015: Kevin placed a tile in column 1].
+Sat Oct 24 17:59:53 CEST 2015: Oskar placed a tile in column 2].
+Sat Oct 24 17:59:53 CEST 2015: Kevin placed a tile in column 2].
+Sat Oct 24 17:59:53 CEST 2015: Oskar placed a tile in column 3].
+Sat Oct 24 17:59:53 CEST 2015: Oskar won!
+Sat Oct 24 18:04:13 CEST 2015: Board was reset.
+Sat Oct 24 18:04:13 CEST 2015: Oskar placed a tile in column 0].
+Sat Oct 24 18:04:13 CEST 2015: Kevv placed a tile in column 0].
+Sat Oct 24 18:04:13 CEST 2015: Oskar placed a tile in column 1].
+Sat Oct 24 18:04:13 CEST 2015: Kevv placed a tile in column 1].
+Sat Oct 24 18:04:13 CEST 2015: Oskar placed a tile in column 2].
+Sat Oct 24 18:04:13 CEST 2015: Kevv placed a tile in column 2].
+Sat Oct 24 18:04:13 CEST 2015: Oskar placed a tile in column 3].
+Sat Oct 24 18:04:13 CEST 2015: Oskar won!

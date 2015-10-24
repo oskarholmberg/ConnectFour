@@ -64,7 +64,6 @@ public class AIBoard extends Board {
         }
         //Change turn.
         this.player = (this.player+1)%nbrOfPlayers;
-        System.out.println(this.player);
     }
 
     private void undoMove(int column, int player) {

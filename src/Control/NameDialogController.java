@@ -26,11 +26,11 @@ public class NameDialogController {
 
     @FXML
     void okClicked(ActionEvent event) {
-        dialogStage.close();
         board.addPlayer(player1.getText());
         board.addPlayer(player2.getText());
         board.reset();
         main.showGamePane();
+        dialogStage.close();
     }
 
     public void setDialogStage(Stage stage){

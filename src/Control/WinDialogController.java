@@ -19,20 +19,20 @@ public class WinDialogController {
     @FXML
     void newGameClicked(ActionEvent event) {
         board.reset();
-        window.close();
         main.showGamePane();
+        window.close();
     }
 
     @FXML
     void mainMenuClicked(ActionEvent event) {
-        window.close();
         main.showMainPane();
+        window.close();
     }
 
     @FXML
     void auditLogClicked(ActionEvent event) {
-        window.close();
         main.showAuditLog();
+        window.close();
     }
 
     public void setWinner(String s){

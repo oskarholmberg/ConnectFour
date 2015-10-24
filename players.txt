@@ -1,4 +1,4 @@
-Oskar:28
+Oskar:33
 Illidan:1
 Rexxar:1
 Joel:1
@@ -16,3 +16,5 @@ Joacim:0
 Jocce:0
 Kocke:0
 Jocke:0
+Kevin:0
+Kevv:0

@@ -135,32 +135,49 @@ public class GamePaneController {
         setTurn();
     }
 
+    /**
+     * Reformats the grid displaying the game session to
+     * concur with the board.
+     */
+
     public void reformatGrid() {
         int width = boardGrid.getColumnConstraints().size();
         int height = boardGrid.getRowConstraints().size();
-
+        //If grid width is smaller than board width add columns
         if (width < board.getWidth()) {
             for (int i = width; i < board.getWidth(); i++) {
                 boardGrid.getColumnConstraints().add(new ColumnConstraints());
             }
         }
+        //If grid width is larger than board width remove columns
         if (width > board.getWidth()) {
             for (int i = width-1; i > board.getWidth()-1; i--) {
                 boardGrid.getColumnConstraints().remove(i);
             }
         }
+        //If grid height is lower than board width add rows
         if (height < board.getHeight()) {
             for (int i = height; i < board.getHeight(); i++) {
                 boardGrid.getRowConstraints().add(new RowConstraints());
             }
         }
+        //If grid height is higher than board width remove rows
         if (height > board.getHeight()) {
             for (int i = height-1; i > board.getHeight()-1; i--) {
                 boardGrid.getRowConstraints().remove(i);
             }
         }
+        //Set constraints (size) of rows and columns to accurate
+        //proportions, i.e. grid width is 350 so each column should be
+        // 350 / (number of columns) wide. Similar for the height.
+        // With the exception with TicTacToe where the board is squared
+        //instead of rectangular.
         for (int i = 0; i < board.getWidth(); i++) {
-            boardGrid.getColumnConstraints().get(i).setPrefWidth(350 / board.getWidth());
+            if(board.getWidth()!=3) {
+                boardGrid.getColumnConstraints().get(i).setPrefWidth(350 / board.getWidth());
+            }else{
+                boardGrid.getColumnConstraints().get(i).setPrefWidth(300 / board.getWidth());
+            }
         }
         for (int i = 0; i < board.getHeight(); i++) {
             boardGrid.getRowConstraints().get(i).setPrefHeight(300 / board.getHeight());
